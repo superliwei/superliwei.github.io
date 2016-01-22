@@ -1,0 +1,7 @@
+{
+	"desc":"多行文本",
+	"require":[
+		"Paragraph.js",
+		"ParagraphDescriptor.js"
+	]
+}

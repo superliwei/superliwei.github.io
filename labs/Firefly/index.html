@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Firefly</title>
+		<link rel="stylesheet" href="assets/css/index.css" />
+		<link rel="stylesheet" href="assets/css/dragItem.css" />
+		<link rel="stylesheet" href="assets/css/scaleTool.css" />
+		<link rel="stylesheet" href="assets/libs/Semantic-UI-master/dist/semantic.min.css" />
+		<link rel="stylesheet" href="assets/libs/colpick/css/colpick.css" />
+		
+		<script src="assets/libs/jquery/jquery-2.1.1.min.js"></script>
+		<script src="assets/libs/Semantic-UI-master/dist/semantic.min.js"></script>
+		<script src="assets/libs/js-base64/base64.js"></script>
+		<script src="assets/libs/colpick/js/colpick.js"></script>
+		<script src="assets/libs/clipboard/dist/clipboard.min.js"></script>
+		
+		<script src="assets/js/firefly.1.0.min.js"></script>
+	</head>
+	<body>
+		<div id="topMenu" class="ui inverted menu">
+			<div class="header item"><img src="assets/image/logo.png">Firefly</div>
+		    <div class="ui dropdown item">
+		    	文件
+		    	<div class="menu" style="min-width: 180px;">
+		    		<div class="item">
+		    			<i class="file text icon"></i>
+      					<span class="text">打开</span>
+		    			<span class="description">Ctrl+O</span>
+		    		</div>
+		    		<div class="item">
+		    			<i class="save icon"></i>
+      					<span class="text">导出</span>
+		    		</div>
+			    </div>
+		    </div>
+		    <div class="ui dropdown item">
+		    	编辑
+		    	<div class="menu" style="min-width: 180px;">
+		    		<div class="item">
+		    			<i class="reply icon"></i>
+      					<span class="text">撤消</span>
+		    			<span class="description">Ctrl+Z</span>
+		    		</div>
+		    		<div class="item">
+		    			<i class="share icon"></i>
+		    			<span class="text">重做</span>
+		    			<span class="description">Ctrl+Y</span>
+		    		</div>
+		    		<div class="divider"></div>
+		    		<div class="item">
+		    			<i class="trash icon"></i>
+		    			<span class="text">删除</span>
+		    			<span class="description">Delete</span>
+		    		</div>
+		    		<div class="divider"></div>
+		    		<div class="item">
+		    			<i class="copy icon"></i>
+		    			<span class="text">复制</span>
+		    			<span class="description">Ctrl+C</span>
+		    		</div>
+		    		<div class="item">
+		    			<i class="cut icon"></i>
+		    			<span class="text">剪切</span>
+		    			<span class="description">Ctrl+X</span>
+		    		</div>
+		    		<div class="item">
+		    			<i class="paste icon"></i>
+		    			<span class="text">粘贴</span>
+		    			<span class="description">Ctrl+V</span>
+		    		</div>
+		    		<div class="divider"></div>
+		    		<div class="item">
+		    			<i class="move icon"></i>
+		    			<span class="text">移动</span>
+		    			<i class="dropdown icon"></i>
+		    			<div class="menu">
+		    				<div class="item">
+				    			<span class="text">向上移动</span>
+				    			<span class="description">&uarr;</span>
+				    		</div>
+				    		<div class="item">
+				    			<span class="text">向下移动</span>
+				    			<span class="description">&darr;</span>
+				    		</div>
+				    		<div class="item">
+				    			<span class="text">向左移动</span>
+				    			<span class="description">&larr;</span>
+				    		</div>
+				    		<div class="item">
+				    			<span class="text">向右移动</span>
+				    			<span class="description">&rarr;</span>
+				    		</div>
+				    		<div class="divider"></div>
+				    		<div class="item">
+				    			<span class="text">置顶</span>
+				    			<span class="description">Ctrl+Shift+&uarr;</span>
+				    		</div>
+				    		<div class="item">
+				    			<span class="text">置底</span>
+				    			<span class="description">Ctrl+Shift+&darr;</span>
+				    		</div>
+				    		<div class="item">
+				    			<span class="text">上移一层</span>
+				    			<span class="description">Ctrl+&uarr;</span>
+				    		</div>
+				    		<div class="item">
+				    			<span class="text">下移一层</span>
+				    			<span class="description">Ctrl+&darr;</span>
+				    		</div>
+		    			</div>
+		    		</div>
+		    		<div class="divider"></div>
+		    		<div class="item">
+		    			<i class="setting icon"></i>
+		    			<span class="text">偏好设定</span>
+		    			<span class="description">Ctrl+U</span>
+		    		</div>
+		    		<div class="item">
+		    			<i class="keyboard icon"></i>
+		    			<span class="text">键盘快捷键</span>
+		    		</div>
+		    	</div>
+		    </div>
+		    <div class="ui dropdown item">
+		    	选择
+		    	<div class="menu" style="min-width: 210px;">
+		    		<div class="item">
+		    			<i class="check circle icon"></i>
+		    			<span class="text">全选</span>
+		    			<span class="description">Ctrl+A</span>
+		    		</div>
+		    		<div class="item">
+		    			<i class="check circle outline icon"></i>
+		    			<span class="text">反选</span>
+		    			<span class="description">Ctrl+Shift+I</span>
+		    		</div>
+		    		<div class="item">
+		    			<i class="circle thin icon"></i>
+		    			<span class="text">取消选择</span>
+		    			<span class="description">Ctrl+D</span>
+		    		</div>
+		    	</div>
+		    </div>
+		    <div class="ui dropdown item">
+		    	视图
+		    	<div class="menu" style="min-width: 200px;">
+		    		<div class="item">
+		    			<i class="dashboard icon"></i>
+		    			<span class="text">属性面板</span>
+		    			<span class="description">Ctrl+1</span>
+		    		</div>
+		    		<div class="item">
+		    			<i class="history icon"></i>
+		    			<span class="text">历史记录</span>
+		    			<span class="description">Ctrl+2</span>
+		    		</div>
+		    		<div class="divider"></div>
+		    		<div class="item">
+		    			<i class="toggle left icon"></i>
+		    			<span class="text">左边栏</span>
+		    			<span class="description">Ctrl+Shift+1</span>
+		    		</div>
+		    		<div class="item">
+		    			<i class="toggle right icon"></i>
+		    			<span class="text">右边栏</span>
+		    			<span class="description">Ctrl+Shift+2</span>
+		    		</div>
+		    	</div>
+		    </div>
+		    <div class="ui dropdown item">
+		    	帮助
+		    	<div class="menu" style="min-width: 180px;">
+			    	<div class="item">
+		    			<i class="info circle icon"></i>
+		    			<span class="text">关于Firefly</span>
+		    		</div>
+	    		</div>
+		    </div>
+		    <div class="right menu">
+		    	<div class="ui dropdown item">
+		    		<div class="text"></div>
+		    		<i class="dropdown icon"></i>
+		    		<div class="menu">
+		    			<a class="item" data-value="properties"><i class="icon dashboard"></i>属性面板</a>
+		    			<a class="item" data-value="history"><i class="icon history"></i>历史记录</a>
+		    		</div>
+			    </div>
+		    </div>
+		</div>
+		<div id="mainLayout">
+			<div id="leftBox">
+				<div id="resourcePanel">
+					<div class="ui top attached tabular menu">
+						<a class="item active" data-tab="component"><i class="star icon"></i>组件</a>
+						<a class="item" data-tab="photoLib"><i class="file image outline icon"></i>图库</a>
+					</div>
+					<div class="ui bottom attached tab segment active" data-tab="component">
+						<div id="componentContainer"></div>
+					</div>
+					<div class="ui bottom attached tab segment" data-tab="photoLib">
+						<div id="photoContainer"></div>
+					</div>
+				</div>
+			</div>
+			<div class="vDivide"><div class="handle"></div></div>
+			<div id="centerBox"></div>
+			<div class="vDivide"><div class="handle"></div></div>
+			<div id="rightBox">
+				<div id="propertiesPanel">
+					<div id="header"></div>
+					<div style="padding:5px;">
+						<div class="ui top attached tabular menu">
+							<a class="item active" data-tab="properties">属性</a>
+							<a class="item" data-tab="layout">布局</a>
+						</div>
+						<div class="ui bottom attached tab segment active" data-tab="properties">
+							<div class="ui small form"></div>
+						</div>
+						<div class="ui bottom attached tab segment" data-tab="layout">
+							<div id="layoutPanel"></div>
+						</div>
+					</div>
+				</div>
+				<div id="historyPanel" style="margin: 5px;">
+					<div class="ui top attached tabular menu">
+						<a class="item active" data-tab="history">历史记录</a>
+					</div>
+					<div class="ui bottom attached tab segment active" data-tab="history">
+						<div class="ui menu">
+							<a class="item"><i class="reply icon"></i></a>
+							<a class="item"><i class="share icon"></i></a>
+							<a class="right item"><i class="trash icon"></i></a>
+						</div>
+						<div class="ui middle aligned selection list"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 设置窗口 -->
+		<div id="settingWin" class="ui modal">
+			<div class="ui labeled icon menu" style="border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;margin: 0px;">
+				<a class="item"><i class="setting icon"></i> 偏好设定 </a>
+				<a class="item"><i class="keyboard icon"></i> 键盘快捷键 </a>
+				<a class="item"><i class="info circle icon"></i> 关于Firefly </a>
+			</div>
+			<div class="content" style="padding: 20px;border-top-left-radius: 0px;border-top-right-radius: 0px;">
+				<div style="display: none;">
+					<form class="ui form">
+						<h4 class="ui dividing header"><i class="icon grid layout"></i>自动对齐</h4>
+						<div class="inline fields">
+							<div class="two wide field">
+						      <div class="ui toggle checkbox">
+						        <input type="checkbox" tabindex="0" class="hidden">
+						        <label>启用</label>
+						      </div>
+						    </div>
+						    <div class="three wide field">
+						    	<label style="min-width: 55px;">吸附距离</label>
+      							<input type="text" placeholder="">
+						    </div>
+						</div>
+						<h4 class="ui dividing header"><i class="icon history"></i>历史记录</h4>
+						<div class="inline fields">
+							<div class="three wide field">
+							   	<label style="min-width: 55px;">最大个数</label>
+	      						<input type="text" placeholder="">
+							</div>
+						</div>
+					</form>
+				</div>
+				<div style="display: none;"></div>
+				<div style="display: none;">
+					<div style="text-align: right;">
+						<i class="link circular icon music inverted"></i>
+					</div>
+					<div style="width: 100px;height: 100px;border-radius: 50px;border: solid 1px #333333;margin: auto;">
+						<img src="assets/image/icon.png" style="display: block;margin: auto;margin-top:20px;" />
+					</div>
+					<div style="font-size: 20px;color: #FFFFFF;text-align: center;">Firefly v0.5</div>
+					<br /><br /><br />
+				</div>
+			</div>
+			<div class="actions">
+				<div style="display: none;"><button class="ui primary ok button">保存</button></div>
+				<div style="display: none;"></div>
+				<div style="display: none;"></div>
+			</div>
+		</div>
+		
+		<!-- 打开窗口 -->
+		<div id="openWin" class="ui modal">
+			<div class="header"><i class="file text icon"></i>打开</div>
+			<div class="content">
+				<div class="ui error message hidden">
+					<i class="close icon"></i>
+					<div class="header"><i class="warning sign icon"></i>不合法的源码！ </div>
+				</div>
+				<div class="ui form">
+					<div class="field"><label>Firefly源码</label><textarea></textarea></div>
+				</div>
+			</div>
+			<div class="actions">
+				<button class="ui primary button">确定</button>
+			</div>
+		</div>
+		
+		<!-- 导出窗口 -->
+		<div id="exportWin" class="ui modal">
+			<div class="header"><i class="save icon"></i>导出</div>
+			<div class="content">
+				<div class="ui success message hidden">
+					<i class="close icon"></i>
+					<div class="header"><i class="flag icon"></i>已复制到剪贴板！ </div>
+				</div>
+				<div class="ui error message hidden" style="margin-top: 0;">
+					<i class="close icon"></i>
+					<div class="header"><i class="warning sign icon"></i>复制失败！ </div>
+				</div>
+				<div class="ui form">
+					<div class="field"><label>Firefly源码</label><textarea></textarea></div>
+				</div>
+			</div>
+			<div class="actions">
+				<button class="ui primary button">复制到剪贴板</button>
+			</div>
+		</div>
+	</body>
+</html>

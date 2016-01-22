@@ -1,0 +1,39 @@
+.scaleTool
+{
+	position: absolute;
+}
+
+.scaleTool .box
+{
+	position:absolute;
+	border:solid 1px #3399FF;
+	background-color: rgba(255, 255, 0, 0.1);
+	pointer-events: none;
+}
+
+.scaleTool .controlBtn
+{
+	position: absolute;
+}
+
+.scaleTool .controlBtn:hover .circle
+{
+	background-color: #FF851B;
+}
+
+.scaleTool .controlBtn.selected .circle
+{
+	background-color: #FF851B;
+}
+
+.scaleTool .controlBtn .circle
+{
+	width: 10px;
+	height: 10px;
+	border: solid 1px #000000;
+	background-color: #FFFFFF;
+	position: absolute;
+	left: -5px;
+	top:-5px;
+	border-radius: 5px;
+}
