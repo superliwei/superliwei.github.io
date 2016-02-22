@@ -22,6 +22,8 @@ colpick Color Picker / colpick.com
 	-ms-user-select: none;
 	-o-user-select: none;
 	user-select: none;
+	
+	z-index: 100;
 }
 /*Color selection box with gradients*/
 .colpick_color {
