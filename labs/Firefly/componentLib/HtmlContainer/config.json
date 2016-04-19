@@ -1,0 +1,7 @@
+{
+	"desc":"HTML容器",
+	"require":[
+		"HtmlContainer.js",
+		"HtmlContainerDescriptor.js"
+	]
+}
