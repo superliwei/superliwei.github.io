@@ -13,7 +13,6 @@
 		<script src="assets/libs/Semantic-UI-master/dist/semantic.min.js"></script>
 		<script src="assets/libs/js-base64/base64.js"></script>
 		<script src="assets/libs/colpick/js/colpick.js"></script>
-		<script src="assets/libs/clipboard/dist/clipboard.min.js"></script>
 		
 		<script src="assets/js/firefly.1.0.min.js"></script>
 	</head>
@@ -288,42 +287,23 @@
 			</div>
 		</div>
 		
-		<!-- 打开窗口 -->
-		<div id="openWin" class="ui modal">
-			<div class="header"><i class="file text icon"></i>打开</div>
+		<!-- 输入窗口 -->
+		<div id="inputWin" class="ui modal">
+			<div class="header"><i class="write icon"></i><label>标题</label></div>
 			<div class="content">
-				<div class="ui error message hidden">
-					<i class="close icon"></i>
-					<div class="header"><i class="warning sign icon"></i>不合法的源码！ </div>
-				</div>
-				<div class="ui form">
-					<div class="field"><label>Firefly源码</label><textarea></textarea></div>
+				<div class="ui fluid right labeled input">
+				  <input type="text" placeholder="PlaceHolder">
+				  <div class="ui basic label">label</div>
 				</div>
 			</div>
 			<div class="actions">
-				<button class="ui primary button">确定</button>
+				<button class="ui primary button">确认</button>
 			</div>
 		</div>
 		
-		<!-- 导出窗口 -->
-		<div id="exportWin" class="ui modal">
-			<div class="header"><i class="save icon"></i>导出</div>
-			<div class="content">
-				<div class="ui success message hidden">
-					<i class="close icon"></i>
-					<div class="header"><i class="flag icon"></i>已复制到剪贴板！ </div>
-				</div>
-				<div class="ui error message hidden" style="margin-top: 0;">
-					<i class="close icon"></i>
-					<div class="header"><i class="warning sign icon"></i>复制失败！ </div>
-				</div>
-				<div class="ui form">
-					<div class="field"><label>Firefly源码</label><textarea></textarea></div>
-				</div>
-			</div>
-			<div class="actions">
-				<button class="ui primary button">复制到剪贴板</button>
-			</div>
+		<!-- 加载遮照  -->
+		<div id="loadingMask" class="ui page dimmer">
+			<div class="ui text loader">Loading</div>
 		</div>
 	</body>
 </html>
