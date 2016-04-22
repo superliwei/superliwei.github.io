@@ -23,9 +23,21 @@
 		    	文件
 		    	<div class="menu" style="min-width: 180px;">
 		    		<div class="item">
-		    			<i class="file text icon"></i>
-      					<span class="text">打开</span>
-		    			<span class="description">Ctrl+O</span>
+		    			<i class="folder open outline icon"></i>
+		    			<span class="text">打开</span>
+		    			<i class="dropdown icon"></i>
+		    			<div class="menu" style="min-width: 180px;">
+				    		<div class="item">
+				    			<i class="file text icon"></i>
+				    			<span class="text">打开文件</span>
+				    			<span class="description">Ctrl+O</span>
+				    		</div>
+				    		<div class="divider"></div>
+				    		<div class="item">
+				    			<i class="world icon"></i>
+				    			<span class="text">在线文件</span>
+				    		</div>
+		    			</div>
 		    		</div>
 		    		<div class="item">
 		    			<i class="save icon"></i>
@@ -315,6 +327,14 @@
 		<!-- 加载遮照  -->
 		<div id="loadingMask" class="ui page dimmer">
 			<div class="ui text loader">Loading</div>
+		</div>
+		
+		<!-- 在线文件窗口  -->
+		<div id="onlineFileWin" class="ui modal">
+			<div class="header"><i class="world icon"></i>在线文件</div>
+			<div class="content" style="margin: 0;padding: 0;padding-right: 10px;padding-bottom: 10px;">
+				<div style="clear: both;"></div>
+			</div>
 		</div>
 	</body>
 </html>
