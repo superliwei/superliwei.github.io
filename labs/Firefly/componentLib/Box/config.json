@@ -1,0 +1,7 @@
+{
+	"desc":"矩形框",
+	"require":[
+		"Box.js",
+		"BoxDescriptor.js"
+	]
+}
