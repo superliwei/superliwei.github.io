@@ -1,0 +1,9 @@
+{
+	"desc":"ECharts容器",
+	"require":[
+		"echarts.min.js",
+		"china.js",
+		"EChartsContainer.js",
+		"EChartsContainerDescriptor.js"
+	]
+}
