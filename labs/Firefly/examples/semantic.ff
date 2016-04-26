@@ -1,0 +1,121 @@
+<div ff-type="EditorCanvas" style="width: 1300px; height: 1080px; background-color: rgb(255, 255, 255);"><div style="width: 202px; height: 28px; position: absolute; overflow: hidden; left: 37px; top: 27px;" ff-autosize="true" ff-type="Label"><p style="position: absolute; cursor: default; font-size: 20px; font-family: Arial; white-space: nowrap; left: 0px;">Firefly Semantic Demo</p></div><div style="width: 41px; height: 28px; position: absolute; overflow: hidden; left: 37px; top: 81px;" ff-autosize="true" ff-type="Label"><p style="position: absolute; cursor: default; font-size: 20px; font-family: Arial; white-space: nowrap; left: 0px; font-weight: 700; font-style: normal; text-decoration: none;">按钮</p></div><div style="width: 84px; height: 36px; position: absolute; overflow: hidden; left: 37px; top: 123px;" ff-autosize="true" ff-type="HtmlContainer"><div style="position:absolute;"><button class="ui button" style="margin:0">Follow</button></div><div style="position:absolute;width:100%;height:100%;"></div></div><div style="width: 71px; height: 36px; position: absolute; overflow: hidden; left: 138px; top: 123px;" ff-autosize="true" ff-type="HtmlContainer"><div style="position:absolute;"><button class="ui primary button" style="margin:0">Save </button></div><div style="position:absolute;width:100%;height:100%;"></div></div><div style="width: 39px; height: 36px; position: absolute; overflow: hidden; left: 231px; top: 123px;" ff-autosize="true" ff-type="HtmlContainer"><div style="position:absolute;"><button class="ui icon button" style="margin:0">
+  <i class="cloud icon"></i>
+</button></div><div style="position:absolute;width:100%;height:100%;"></div></div><div style="width: 180px; height: 37px; position: absolute; overflow: hidden; left: 37px; top: 252px;" ff-autosize="true" ff-type="HtmlContainer"><div style="position:absolute;"><div class="ui input">
+  <input type="text" placeholder="Search...">
+</div></div><div style="position:absolute;width:100%;height:100%;"></div></div><div style="width: 61px; height: 28px; position: absolute; overflow: hidden; left: 37px; top: 208px;" ff-autosize="true" ff-type="Label"><p style="position: absolute; cursor: default; font-size: 20px; font-family: Arial; white-space: nowrap; left: 0px; font-weight: 700; font-style: normal; text-decoration: none;">输入框</p></div><div style="width: 203px; height: 37px; position: absolute; overflow: hidden; left: 231px; top: 252px;" ff-autosize="true" ff-type="HtmlContainer"><div style="position:absolute;"><div class="ui icon input">
+  <input type="text" placeholder="Search...">
+  <i class="search icon"></i>
+</div></div><div style="position:absolute;width:100%;height:100%;"></div></div><div style="width: 257px; height: 30px; position: absolute; overflow: hidden; left: 37px; top: 367px;" ff-autosize="false" ff-type="HtmlContainer"><div style="position:absolute;"><a class="ui tag label">New</a>
+<a class="ui red tag label">即将到来</a>
+<a class="ui teal tag label">精选</a></div><div style="position:absolute;width:100%;height:100%;"></div></div><div style="width: 41px; height: 28px; position: absolute; overflow: hidden; left: 37px; top: 322px;" ff-autosize="true" ff-type="Label"><p style="position: absolute; cursor: default; font-size: 20px; font-family: Arial; white-space: nowrap; left: 0px; font-weight: 700; font-style: normal; text-decoration: none;">标签</p></div><div style="width: 138px; height: 30px; position: absolute; overflow: hidden; left: 301px; top: 367px;" ff-autosize="false" ff-type="HtmlContainer"><div style="position:absolute;"><a class="ui label"><i class="mail icon"></i> Mail </a>
+<a class="ui label">Tag <i class="delete icon"></i> </a></div><div style="position:absolute;width:100%;height:100%;"></div></div><div style="width: 733px; height: 29px; position: absolute; overflow: hidden; left: 37px; top: 406px;" ff-autosize="false" ff-type="HtmlContainer"><div style="position:absolute;"><a class="ui red label">Red</a>
+<a class="ui orange label">Orange</a>
+<a class="ui yellow label">Yellow</a>
+<a class="ui olive label">Olive</a>
+<a class="ui green label">Green</a>
+<a class="ui teal label">Teal</a>
+<a class="ui blue label">Blue</a>
+<a class="ui violet label">紫罗兰色</a>
+<a class="ui purple label">Purple</a>
+<a class="ui pink label">Pink</a>
+<a class="ui brown label">褐色</a>
+<a class="ui grey label">灰色</a>
+<a class="ui black label">Black</a></div><div style="position:absolute;width:100%;height:100%;"></div></div><div style="width: 354px; height: 157px; position: absolute; overflow: hidden; left: 31px; top: 517px;" ff-autosize="false" ff-type="HtmlContainer"><div style="position:absolute;"><div class="ui raised segment">
+  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+</div></div><div style="position:absolute;width:100%;height:100%;"></div></div><div style="width: 41px; height: 28px; position: absolute; overflow: hidden; left: 37px; top: 473px;" ff-autosize="true" ff-type="Label"><p style="position: absolute; cursor: default; font-size: 20px; font-family: Arial; white-space: nowrap; left: 0px; font-weight: 700; font-style: normal; text-decoration: none;">分段</p></div><div style="width: 368px; height: 160px; position: absolute; overflow: hidden; left: 403px; top: 517px;" ff-autosize="false" ff-type="HtmlContainer"><div style="position:absolute;"><div class="ui stacked segment">
+  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+</div></div><div style="position:absolute;width:100%;height:100%;"></div></div><div style="width: 738px; height: 272px; position: absolute; overflow: hidden; left: 31px; top: 683px;" ff-autosize="false" ff-type="HtmlContainer"><div style="position:absolute;"><div class="ui piled segment">
+  <h4 class="ui header">头部</h4>
+  <p>Te eum doming eirmod, nominati pertinacia argumentum ad his. Ex eam alia facete scriptorem, est autem aliquip detraxit at. Usu ocurreret referrentur at, cu epicurei appellantur vix. Cum ea laoreet recteque electram, eos choro alterum definiebas in. Vim dolorum definiebas an. Mei ex natum rebum iisque.</p>
+   <p>Audiam quaerendum eu sea, pro omittam definiebas ex. Te est latine definitiones. Quot wisi nulla ex duo. Vis sint solet expetenda ne, his te phaedrum referrentur consectetuer. Id vix fabulas oporteat, ei quo vide phaedrum, vim vivendum maiestatis in.</p>
+   <p>Eu quo homero blandit intellegebat. Incorrupte consequuntur mei id. Mei ut facer dolores adolescens, no illum aperiri quo, usu odio brute at. Qui te porro electram, ea dico facete utroque quo. Populo quodsi te eam, wisi everti eos ex, eum elitr altera utamur at. Quodsi convenire mnesarchum eu per, quas minimum postulant per id.</p>
+</div></div><div style="position:absolute;width:100%;height:100%;"></div></div><div style="width: 723px; height: 69px; position: absolute; overflow: hidden; left: 31px; top: 970px;" ff-autosize="false" ff-type="HtmlContainer"><div style="position:absolute;"><div class="ui ordered steps">
+  <div class="completed step">
+    <div class="content">
+      <div class="title">Shipping</div>
+      <div class="description">Choose your shipping options</div>
+    </div>
+  </div>
+  <div class="completed step">
+    <div class="content">
+      <div class="title">Billing</div>
+      <div class="description">Enter billing information</div>
+    </div>
+  </div>
+  <div class="active step">
+    <div class="content">
+      <div class="title">Confirm Order</div>
+      <div class="description">Verify order details</div>
+    </div>
+  </div>
+</div></div><div style="position:absolute;width:100%;height:100%;"></div></div><div style="width: 102px; height: 28px; position: absolute; overflow: hidden; left: 895px; top: 81px;" ff-autosize="true" ff-type="Label"><p style="position: absolute; cursor: default; font-size: 20px; font-family: Arial; white-space: nowrap; left: 0px; font-weight: 700; font-style: normal; text-decoration: none;">面包屑导航</p></div><div style="width: 165px; height: 28px; position: absolute; overflow: hidden; left: 898px; top: 127px;" ff-autosize="false" ff-type="HtmlContainer"><div style="position:absolute;"><div class="ui breadcrumb">
+  <a class="section">Home</a>
+  <div class="divider"> / </div>
+  <a class="section">Store</a>
+  <div class="divider"> / </div>
+  <div class="active section">T-Shirt</div>
+</div></div><div style="position:absolute;width:100%;height:100%;"></div></div><div style="width: 41px; height: 28px; position: absolute; overflow: hidden; left: 895px; top: 173px;" ff-autosize="true" ff-type="Label"><p style="position: absolute; cursor: default; font-size: 20px; font-family: Arial; white-space: nowrap; left: 0px; font-weight: 700; font-style: normal; text-decoration: none;">表单</p></div><div style="width: 279px; height: 225px; position: absolute; overflow: hidden; left: 895px; top: 222px;" ff-autosize="false" ff-type="HtmlContainer"><div style="position:absolute;"><form class="ui form">
+  <div class="field">
+    <label>First Name</label>
+    <input type="text" name="first-name" placeholder="First Name">
+  </div>
+  <div class="field">
+    <label>Last Name</label>
+    <input type="text" name="last-name" placeholder="Last Name">
+  </div>
+  <div class="field">
+    <div class="ui checkbox">
+      <input type="checkbox" tabindex="0" class="hidden">
+      <label>I agree to the Terms and Conditions</label>
+    </div>
+  </div>
+  <button class="ui button" type="submit">Submit</button>
+</form></div><div style="position:absolute;width:100%;height:100%;"></div></div><div style="width: 338px; height: 146px; position: absolute; overflow: hidden; left: 895px; top: 501px;" ff-autosize="false" ff-type="HtmlContainer"><div style="position:absolute;"><div class="ui equal width center aligned padded grid">
+  <div class="row">
+    <div class="olive column">Olive </div>
+    <div class="black column">Black </div>
+  </div>
+  <div class="row" style="background-color: #869D05;color: #FFFFFF;">
+    <div class="column">自定义行</div>
+  </div>
+  <div class="row">
+    <div class="black column">Black </div>
+    <div class="olive column">Olive </div>
+  </div>
+</div></div><div style="position:absolute;width:100%;height:100%;"></div></div><div style="width: 41px; height: 28px; position: absolute; overflow: hidden; left: 895px; top: 459px;" ff-autosize="true" ff-type="Label"><p style="position: absolute; cursor: default; font-size: 20px; font-family: Arial; white-space: nowrap; left: 0px; font-weight: 700; font-style: normal; text-decoration: none;">网格</p></div><div style="width: 41px; height: 28px; position: absolute; overflow: hidden; left: 895px; top: 660px;" ff-autosize="true" ff-type="Label"><p style="position: absolute; cursor: default; font-size: 20px; font-family: Arial; white-space: nowrap; left: 0px; font-weight: 700; font-style: normal; text-decoration: none;">表格</p></div><div style="width: 257px; height: 207px; position: absolute; overflow: hidden; left: 895px; top: 700px;" ff-autosize="true" ff-type="HtmlContainer"><div style="position:absolute;"><table class="ui celled table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Status</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>未命名</td>
+      <td>已审核</td>
+      <td>None</td>
+    </tr>
+    <tr class="error">
+      <td>吉米</td>
+      <td>不能拉取数据</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>杰米</td>
+      <td>已审核</td>
+      <td class="error"><i class="attention icon"></i> 已认证</td>
+    </tr>
+    <tr>
+      <td>吉尔</td>
+      <td>已审核</td>
+      <td>None</td>
+    </tr>
+  </tbody>
+</table></div><div style="position:absolute;width:100%;height:100%;"></div></div><div style="width: 190px; height: 22px; position: absolute; overflow: hidden; left: 895px; top: 979px;" ff-autosize="false" ff-type="HtmlContainer"><div style="position:absolute;"><div class="ui checkbox">
+  <input type="checkbox" name="example">
+  <label>Make my profile visible</label>
+</div></div><div style="position:absolute;width:100%;height:100%;"></div></div><div style="width: 61px; height: 28px; position: absolute; overflow: hidden; left: 895px; top: 937px;" ff-autosize="true" ff-type="Label"><p style="position: absolute; cursor: default; font-size: 20px; font-family: Arial; white-space: nowrap; left: 0px; font-weight: 700; font-style: normal; text-decoration: none;">复选框</p></div><div style="width: 145px; height: 21px; position: absolute; overflow: hidden; left: 895px; top: 1018px;" ff-autosize="false" ff-type="HtmlContainer"><div style="position:absolute;"><div class="ui radio checkbox">
+  <input type="radio" name="radio" checked="checked">
+  <label>Radio choice</label>
+</div></div><div style="position:absolute;width:100%;height:100%;"></div></div></div>
