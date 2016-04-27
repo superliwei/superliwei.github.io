@@ -5,6 +5,11 @@ html,body
 	overflow: hidden;
 	margin: 0;
 }
+#preload
+{
+	position: absolute;
+	display: none;
+}
 #topMenu
 {
 	margin: 0;
