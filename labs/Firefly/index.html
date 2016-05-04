@@ -9,11 +9,17 @@
 		<link rel="stylesheet" href="assets/libs/Semantic-UI-master/dist/semantic.min.css" />
 		<link rel="stylesheet" href="assets/libs/colpick/css/colpick.css" />
 		
+		<link rel="stylesheet" href="assets/libs/CodeMirror-master/lib/codemirror.css" />
+		<link rel="stylesheet" href="assets/libs/CodeMirror-master/theme/tomorrow-night-bright.css"/>
+		
 		<script src="assets/libs/jquery/jquery-2.1.1.min.js"></script>
 		<script src="assets/libs/Semantic-UI-master/dist/semantic.min.js"></script>
 		<script src="assets/libs/js-base64/base64.js"></script>
 		<script src="assets/libs/colpick/js/colpick.js"></script>
 		<script src="assets/libs/jquery-mousewheel-master/jquery.mousewheel.min.js"></script>
+		
+		<script src="assets/libs/CodeMirror-master/lib/codemirror.js"></script>
+		<script src="assets/libs/CodeMirror-master/mode/xml/xml.js"></script>
 		
 		<script src="assets/js/firefly.1.0.min.js"></script>
 	</head>
@@ -192,6 +198,16 @@
 		    	</div>
 		    </div>
 		    <div class="ui dropdown item">
+		    	预览
+		    	<div class="menu" style="min-width: 205px;">
+		    		<div class="item">
+		    			<i class="play icon"></i>
+		    			<span class="text">当前预览</span>
+		    			<span class="description">Ctrl+Enter</span>
+		    		</div>
+		    	</div>
+		    </div>
+		    <div class="ui dropdown item">
 		    	帮助
 		    	<div class="menu" style="min-width: 180px;">
 			    	<div class="item">
@@ -342,6 +358,22 @@
 			<div class="content" style="margin: 0;padding: 0;padding-right: 10px;padding-bottom: 10px;">
 				<div style="clear: both;"></div>
 			</div>
+		</div>
+		
+		<!-- 预览界面 -->
+		<div id="previewView" class="ui page dimmer" style="text-align: left;">
+			<div class="ui icon inverted vertical menu" style="margin: 0;border-radius: 0;height: 100%;">
+				<a class="item">
+		    		<i class="remove circle icon"></i>
+		    	</a>
+		    	<a class="item">
+		    		<i class="browser icon"></i>
+		    	</a>
+		    	<a class="item">
+		    		<i class="code icon"></i>
+		    	</a>
+			</div>
+			<div id="container" style="position: absolute;"></div>
 		</div>
 	</body>
 </html>
