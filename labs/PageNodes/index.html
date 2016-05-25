@@ -1,0 +1,426 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>PageNodes</title>
+		<link rel="stylesheet" href="assets/libs/Semantic-UI-master/dist/semantic.min.css" />
+		<link rel="stylesheet" href="assets/libs/noUiSlider-master/distribute/nouislider.min.css" />
+		<link rel="stylesheet" href="assets/libs/colpick/css/colpick.css" />
+		
+		<link rel="stylesheet" href="assets/css/icon/iconfont.css" />
+		<link rel="stylesheet" href="assets/css/index.css" />
+		
+		<script src="assets/libs/jquery/jquery-2.1.1.min.js"></script>
+		<script src="assets/libs/jquery-mousewheel-master/jquery.mousewheel.min.js"></script>
+		<script src="assets/libs/Semantic-UI-master/dist/semantic.min.js"></script>
+		<script src="assets/libs/pixi.js-master/bin/pixi.min.js"></script>
+		<script src="assets/libs/colpick/js/colpick.js"></script>
+		<script src="assets/libs/noUiSlider-master/distribute/nouislider.min.js"></script>
+		<script src="assets/libs/js-base64/base64.js"></script>
+  		
+  		<script src="assets/js/pagenodes.1.0.min.js"></script>
+	</head>
+	<body>
+		<div id="preload">
+			<img src="assets/image/cursors/CrossHair.gif" />
+			<img src="assets/image/cursors/newPage.png" />
+			<img src="assets/image/cursors/zoomIn.png" />
+			<img src="assets/image/cursors/zoomOut.png" />
+		</div>
+		<div id="topMenu" class="ui menu inverted olive">
+			<div class="header item"><img src="assets/image/logo.png">PageNodes</div>
+		    <div class="ui dropdown item">
+		    	文件
+		    	<div class="menu" style="min-width: 180px;">
+		    		<div class="item">
+		    			<i class="folder open outline icon"></i>
+		    			<span class="text">打开</span>
+		    			<i class="dropdown icon"></i>
+		    			<div class="menu" style="min-width: 180px;">
+				    		<div class="item">
+				    			<i class="file text icon"></i>
+				    			<span class="text">打开文件</span>
+				    			<span class="description">Ctrl+O</span>
+				    		</div>
+				    		<div class="divider"></div>
+				    		<div class="item">
+				    			<i class="world icon"></i>
+				    			<span class="text">在线文件</span>
+				    		</div>
+		    			</div>
+		    		</div>
+		    		<div class="item">
+		    			<i class="save icon"></i>
+		    			<span class="text">保存</span>
+		    			<i class="dropdown icon"></i>
+		    			<div class="menu" style="min-width: 180px;">
+				    		<div class="item">
+				    			<i class="file text icon"></i>
+				    			<span class="text">保存文件</span>
+				    			<span class="description">Ctrl+S</span>
+				    		</div>
+		    			</div>
+		    		</div>
+		    		<div class="divider"></div>
+		    		<div class="item">
+		    			<i class="file image outline icon"></i>
+		    			<span class="text">导出图片</span>
+		    		</div>
+			    </div>
+		    </div>
+		    <div class="ui dropdown item">
+		    	编辑
+		    	<div class="menu" style="min-width: 210px;">
+		    		<div class="item">
+		    			<i class="reply icon"></i>
+      					<span class="text">撤消</span>
+		    			<span class="description">Ctrl+Z</span>
+		    		</div>
+		    		<div class="item">
+		    			<i class="share icon"></i>
+		    			<span class="text">重做</span>
+		    			<span class="description">Ctrl+Y</span>
+		    		</div>
+		    		<div class="divider"></div>
+		    		<div class="item">
+		    			<i class="trash icon"></i>
+		    			<span class="text">删除</span>
+		    			<span class="description">Delete</span>
+		    		</div>
+		    		<div class="divider"></div>
+		    		<div class="item">
+		    			<span class="text">修改页面大小</span>
+		    			<span class="description">Ctrl+M</span>
+		    		</div>
+		    		<div class="divider"></div>
+		    		<div class="item">
+		    			<i class="file outline icon"></i>
+		    			<span class="text">新页面</span>
+		    			<span class="description">Ctrl+N</span>
+		    		</div>
+		    		<div class="divider"></div>
+		    		<div class="item">
+		    			<i class="copy icon"></i>
+		    			<span class="text">复制</span>
+		    			<span class="description">Ctrl+C</span>
+		    		</div>
+		    		<div class="item">
+		    			<i class="cut icon"></i>
+		    			<span class="text">剪切</span>
+		    			<span class="description">Ctrl+X</span>
+		    		</div>
+		    		<div class="item">
+		    			<i class="paste icon"></i>
+		    			<span class="text">粘贴</span>
+		    			<span class="description">Ctrl+V</span>
+		    		</div>
+		    		<div class="divider"></div>
+		    		<div class="item">
+		    			<i class="icon iconfont icon-tool"></i>
+		    			<span class="text">工具</span>
+		    			<i class="dropdown icon"></i>
+		    			<div class="menu" style="min-width: 200px;">
+				    		<div class="item">
+				    			<i class="icon iconfont icon-pointer"></i>
+				    			<span class="text">选择工具</span>
+				    			<span class="description">Shift+1</span>
+				    		</div>
+				    		<div class="item">
+				    			<i class="icon iconfont icon-drag"></i>
+				    			<span class="text">拖动工具</span>
+				    			<span class="description">Shift+2</span>
+				    		</div>
+				    		<div class="item">
+				    			<i class="icon iconfont icon-page"></i>
+				    			<span class="text">页面工具</span>
+				    			<span class="description">Shift+3</span>
+				    		</div>
+				    		<div class="item">
+				    			<i class="icon iconfont icon-button"></i>
+				    			<span class="text">按钮工具</span>
+				    			<span class="description">Shift+4</span>
+				    		</div>
+				    		<div class="item">
+				    			<i class="zoom icon"></i>
+				    			<span class="text">放大镜</span>
+				    			<span class="description">Shift+5</span>
+				    		</div>
+		    			</div>
+		    		</div>
+		    		<div class="divider"></div>
+		    		<div class="item">
+		    			<i class="setting icon"></i>
+		    			<span class="text">偏好设定</span>
+		    			<span class="description">Ctrl+U</span>
+		    		</div>
+		    		<div class="item">
+		    			<i class="keyboard icon"></i>
+		    			<span class="text">键盘快捷键</span>
+		    		</div>
+		    	</div>
+		    </div>
+		    <div class="ui dropdown item">
+		    	选择
+		    	<div class="menu" style="min-width: 210px;">
+		    		<div class="item">
+		    			<i class="check circle icon"></i>
+		    			<span class="text">全选</span>
+		    			<i class="dropdown icon"></i>
+		    			<div class="menu">
+		    				<div class="item">
+				    			<span class="text">全部</span>
+				    			<span class="description">Ctrl+A</span>
+				    		</div>
+				    		<div class="item">
+				    			<span class="text">所有页面</span>
+				    		</div>
+				    		<div class="item">
+				    			<span class="text">所有链接</span>
+				    		</div>
+		    			</div>
+		    		</div>
+		    		<div class="item">
+		    			<i class="check circle outline icon"></i>
+		    			<span class="text">反选</span>
+		    			<span class="description">Ctrl+Shift+I</span>
+		    		</div>
+		    		<div class="item">
+		    			<i class="circle thin icon"></i>
+		    			<span class="text">取消选择</span>
+		    			<span class="description">Ctrl+D</span>
+		    		</div>
+		    	</div>
+		    </div>
+		    <div class="ui dropdown item">
+		    	视图
+		    	<div class="menu" style="min-width: 200px;">
+		    		<div class="item">
+		    			<i class="dashboard icon"></i>
+		    			<span class="text">属性面板</span>
+		    			<span class="description">Ctrl+1</span>
+		    		</div>
+		    		<div class="item">
+		    			<i class="history icon"></i>
+		    			<span class="text">历史记录</span>
+		    			<span class="description">Ctrl+2</span>
+		    		</div>
+		    		<div class="divider"></div>
+		    		<div class="item">
+		    			<i class="toggle left icon"></i>
+		    			<span class="text">左边栏</span>
+		    			<span class="description">Ctrl+Shift+1</span>
+		    		</div>
+		    		<div class="item">
+		    			<i class="toggle right icon"></i>
+		    			<span class="text">右边栏</span>
+		    			<span class="description">Ctrl+Shift+2</span>
+		    		</div>
+		    	</div>
+		    </div>
+		    <div class="ui dropdown item">
+		    	帮助
+		    	<div class="menu" style="min-width: 180px;">
+			    	<div class="item">
+		    			<i class="info circle icon"></i>
+		    			<span class="text">关于PageNodes</span>
+		    		</div>
+	    		</div>
+		    </div>
+		    <div class="right menu">
+		    	<div class="ui dropdown item">
+		    		<div class="text"></div>
+		    		<i class="dropdown icon"></i>
+		    		<div class="menu">
+		    		</div>
+		    	</div>
+		    	<div class="ui dropdown item">
+		    		<div class="text"></div>
+		    		<i class="dropdown icon"></i>
+		    		<div class="menu">
+		    			<a class="item" data-value="properties"><i class="icon dashboard"></i>属性面板</a>
+		    			<a class="item" data-value="history"><i class="icon history"></i>历史记录</a>
+		    		</div>
+			    </div>
+		    </div>
+		</div>
+		<div id="mainLayout">
+			<div id="leftBox">
+				<div id="toolPanel">
+					<div class="ui vertical basic icon buttons">
+						<button class="ui button"><i class="icon iconfont icon-pointer"></i></button>
+						<button class="ui button"><i class="icon iconfont icon-drag"></i></button>
+						<button class="ui button"><i class="icon iconfont icon-page"></i></button>
+						<button class="ui button"><i class="icon iconfont icon-button"></i></button>
+						<button class="ui button"><i class="zoom icon"></i></button>
+					</div>
+				</div>
+			</div>
+			<div class="vDivide"><div class="handle"></div></div>
+			<div id="centerBox">
+				<div id="editorContainer"></div>
+			</div>
+			<div class="vDivide"><div class="handle"></div></div>
+			<div id="rightBox">
+				<div id="propertiesPanel">
+					<div id="header"></div>
+					<div style="padding:5px;">
+						<div class="ui top attached tabular menu">
+							<a class="item active" data-tab="properties">属性</a>
+						</div>
+						<div class="ui bottom attached tab segment active" data-tab="properties">
+							<div class="ui small form"></div>
+						</div>
+					</div>
+				</div>
+				<div id="historyPanel" style="margin: 5px;">
+					<div class="ui top attached tabular menu">
+						<a class="item active" data-tab="history">历史记录</a>
+					</div>
+					<div class="ui bottom attached tab segment active" data-tab="history">
+						<div class="ui menu">
+							<a class="item"><i class="reply icon"></i></a>
+							<a class="item"><i class="share icon"></i></a>
+							<a class="right item"><i class="trash icon"></i></a>
+						</div>
+						<div class="ui middle aligned selection list"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 设置窗口 -->
+		<div id="settingWin" class="ui modal">
+			<div class="ui labeled icon menu inverted olive" style="border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;margin: 0px;">
+				<a class="item"><i class="setting icon"></i> 偏好设定 </a>
+				<a class="item"><i class="keyboard icon"></i> 键盘快捷键 </a>
+				<a class="item"><i class="info circle icon"></i> 关于PageNodes</a>
+			</div>
+			<div class="content" style="padding: 20px;border-top-left-radius: 0px;border-top-right-radius: 0px;">
+				<div style="display: none;">
+					<form class="ui form">
+						<h4 class="ui dividing header"><i class="icon history"></i>历史记录</h4>
+						<div class="inline fields">
+							<div class="three wide field">
+							   	<label style="min-width: 55px;">最大个数</label>
+	      						<input type="text" placeholder="">
+							</div>
+						</div>
+					</form>
+				</div>
+				<div style="display: none;"></div>
+				<div style="display: none;">
+					<div style="text-align: right;">
+						<i class="link circular icon music inverted"></i>
+					</div>
+					<div style="width: 200px;height: 200px;border-radius: 100px;border: solid 1px #E3E3E3;margin: auto;">
+						<img src="assets/image/logo.png" style="max-width: 200px; max-height: 200px;" />
+					</div>
+					<div style="font-size: 20px;color: #333333;text-align: center;">PageNodes v0.5</div>
+					<br /><br /><br />
+				</div>
+			</div>
+			<div class="actions">
+				<div style="display: none;"><button class="ui primary ok button">保存</button></div>
+				<div style="display: none;"></div>
+				<div style="display: none;"></div>
+			</div>
+		</div>
+		
+		<!-- 修改页面大小窗口  -->
+		<div id="editPageSizeWin" class="ui modal">
+			<div class="header"><i class="edit icon"></i><label>修改页面大小</label></div>
+			<div class="content">
+				<p>当前大小 : <span>960*540</span></p>
+				<h5 style="margin: 0;margin-bottom: 5px;">预置尺寸</h5>
+				<div class="ui segment">
+					<button class="ui basic icon big button" data-width="750" data-height="1334">
+					  <i class="mobile icon"></i>
+					  iPhone6
+					</button>
+					<button class="ui basic icon big button" data-width="1242" data-height="2208">
+					  <i class="mobile icon"></i>
+					  iPhone6 Plus
+					</button>
+					<button class="ui basic icon big button" data-width="640" data-height="1136">
+					  <i class="mobile icon"></i>
+					  iPhone5 - 5C - 5S
+					</button>
+					<button class="ui basic icon big button" data-width="640" data-height="960">
+					  <i class="mobile icon"></i>
+					  iPhone4 - 4S
+					</button>
+					<button class="ui basic icon big button" data-width="320" data-height="480">
+					  <i class="mobile icon"></i>
+					  iPhone & iPod Touch第一代、第二代、第三代
+					</button>
+					<button class="ui basic icon big button" data-width="2048" data-height="1536">
+					  <i class="tablet icon"></i>
+					  iPad 3 - 4 - 5 - 6 - Air - Air2 - mini2
+					</button>
+					<button class="ui basic icon big button" data-width="1024" data-height="768">
+					  <i class="tablet icon"></i>
+					  iPad 1 - 2 - Mini
+					</button>
+					<button class="ui basic icon big button" data-width="1920" data-height="1080">
+					  <i class="desktop icon"></i>
+					  1920×1080
+					</button>
+					<button class="ui basic icon big button" data-width="1366" data-height="768">
+					  <i class="desktop icon"></i>
+					  1366×768
+					</button>
+					<button class="ui basic icon big button" data-width="1280" data-height="800">
+					  <i class="desktop icon"></i>
+					  1280×800
+					</button>
+					<button class="ui basic icon big button" data-width="1680" data-height="1050">
+					  <i class="desktop icon"></i>
+					  1680×1050
+					</button>
+				</div>
+				<form class="ui form">
+					<h4 class="ui dividing header">新大小</h4>
+					<div class="inline fields">
+						<div class="field">
+					      <label>宽</label>
+					      <input type="text" >
+					    </div>
+					    <div class="field">
+					      <label>高</label>
+					      <input type="text" >
+					    </div>
+					</div>
+				</form>
+			</div>
+			<div class="actions">
+				<button class="ui primary button">修改</button>
+			</div>
+		</div>
+		
+		<!-- 加载遮照  -->
+		<div id="loadingMask" class="ui page dimmer">
+			<div class="ui text loader">Loading</div>
+		</div>
+		
+		<!-- 在线文件窗口  -->
+		<div id="onlineFileWin" class="ui modal">
+			<div class="header"><i class="world icon"></i>在线文件</div>
+			<div class="content" style="margin: 0;padding: 0;padding-right: 10px;padding-bottom: 10px;">
+				<div style="clear: both;"></div>
+			</div>
+		</div>
+		
+		<!-- 输入窗口 -->
+		<div id="inputWin" class="ui modal">
+			<div class="header"><i class="write icon"></i><label>标题</label></div>
+			<div class="content">
+				<div class="ui fluid right labeled input">
+				  <input type="text" placeholder="PlaceHolder">
+				  <div class="ui basic label">label</div>
+				</div>
+			</div>
+			<div class="actions">
+				<button class="ui primary button">确认</button>
+			</div>
+		</div>
+	</body>
+</html>
