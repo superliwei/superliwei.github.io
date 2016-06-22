@@ -1,0 +1,6 @@
+{
+	"desc":"Ellipsoid组件",
+	"require":[
+		"EllipsoidComponent.js"
+	]
+}

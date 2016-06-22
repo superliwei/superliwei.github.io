@@ -1,0 +1,6 @@
+{
+	"desc":"3d模型组件",
+	"require":[
+		"ModelComponent.js"
+	]
+}

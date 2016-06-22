@@ -1,0 +1,13 @@
+[
+	{
+		"type":"Cesium",
+		"list":[
+			{"name":"CesiumAir","model":"Cesium_Air.glb"},
+			{"name":"CesiumGround","model":"Cesium_Ground.glb"},
+			{"name":"CesiumMan","model":"Cesium_Man.glb"},
+			{"name":"CesiumMilkTruck","model":"CesiumMilkTruck.glb"},
+			{"name":"ShadowTester","model":"Shadow_Tester_2.gltf"},
+			{"name":"WoodTower","model":"Wood_Tower.gltf"}
+		]
+	}
+]

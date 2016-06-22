@@ -1,0 +1,6 @@
+{
+	"desc":"Polygon组件",
+	"require":[
+		"PolygonComponent.js"
+	]
+}

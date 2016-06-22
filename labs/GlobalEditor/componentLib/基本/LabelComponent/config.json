@@ -1,0 +1,6 @@
+{
+	"desc":"Label组件",
+	"require":[
+		"LabelComponent.js"
+	]
+}

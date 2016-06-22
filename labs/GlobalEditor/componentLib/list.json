@@ -1,0 +1,31 @@
+[
+	{
+		"type":"基本",
+		"list":[
+			"BillboardComponent",
+			"ModelComponent",
+			"BoxComponent",
+			"CorridorComponent",
+			"CylinderComponent",
+			"EllipseComponent",
+			"EllipsoidComponent",
+			"LabelComponent",
+			"PointComponent",
+			"PolygonComponent",
+			"PolylineComponent",
+			"PolylineVolumeComponent",
+			"RectangleComponent",
+			"WallComponent"
+		]
+	},
+	{
+		"type":"常用",
+		"list":[
+			"WebGLGlobeComponent"
+		]
+	},
+	{
+		"type":"高级",
+		"list":[]
+	}
+]

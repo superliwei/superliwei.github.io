@@ -1,0 +1,6 @@
+{
+	"desc":"PolylineVolume组件",
+	"require":[
+		"PolylineVolumeComponent.js"
+	]
+}

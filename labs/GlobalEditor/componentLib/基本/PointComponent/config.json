@@ -1,0 +1,6 @@
+{
+	"desc":"Point组件",
+	"require":[
+		"PointComponent.js"
+	]
+}

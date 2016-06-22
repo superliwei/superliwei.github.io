@@ -1,0 +1,1 @@
+.layerEditItem{border:solid 1px #e3e3e3;margin-bottom:5px;border-radius:5px;background-color:#fff;padding:5px;cursor:pointer}.layerEditItem label{vertical-align:middle;pointer-events:none}.layerEditItem button.upBt,button.downBt{float:right}.layerEditItem .button{display:none}.layerEditItem.selected{border:solid 2px #00f}.layerEditItem.edit .button{display:inline}

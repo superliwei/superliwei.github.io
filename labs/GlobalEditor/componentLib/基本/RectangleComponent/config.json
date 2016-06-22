@@ -1,0 +1,6 @@
+{
+	"desc":"Rectangle组件",
+	"require":[
+		"RectangleComponent.js"
+	]
+}

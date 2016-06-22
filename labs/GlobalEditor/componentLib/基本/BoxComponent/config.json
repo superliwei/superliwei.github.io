@@ -1,0 +1,6 @@
+{
+	"desc":"Box组件",
+	"require":[
+		"BoxComponent.js"
+	]
+}

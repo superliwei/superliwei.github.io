@@ -2,6 +2,10 @@
 
 ###2016
 
+* GlobalEditor
+
+    http://superliwei.github.io/labs/GlobalEditor/
+
 * PageNodes
 
     http://superliwei.github.io/labs/PageNodes/

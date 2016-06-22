@@ -1,0 +1,1 @@
+GlobalEditor.ComponentManager.map.PointComponent=function(a){GlobalEditor.ComponentManager.map.EntityComponent.call(this,a);this.title="Point\u7ec4\u4ef6";this.getEntityOptions=function(){return{point:{show:!0,color:Cesium.Color.SKYBLUE,pixelSize:10,outlineColor:Cesium.Color.YELLOW,outlineWidth:3},position:Cesium.Cartesian3.fromDegrees(Number(a.gps.lng),Number(a.gps.lat))}}};

@@ -1,0 +1,1 @@
+GlobalEditor.ComponentManager.map.LabelComponent=function(a){GlobalEditor.ComponentManager.map.EntityComponent.call(this,a);this.title="Label\u7ec4\u4ef6";this.getEntityOptions=function(){return{label:{text:"Label"},position:Cesium.Cartesian3.fromDegrees(Number(a.gps.lng),Number(a.gps.lat))}}};

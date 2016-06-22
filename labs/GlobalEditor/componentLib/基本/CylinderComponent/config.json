@@ -1,0 +1,6 @@
+{
+	"desc":"Cylinder组件",
+	"require":[
+		"CylinderComponent.js"
+	]
+}

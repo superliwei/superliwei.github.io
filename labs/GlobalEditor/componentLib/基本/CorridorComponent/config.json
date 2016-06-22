@@ -1,0 +1,6 @@
+{
+	"desc":"Corridor组件",
+	"require":[
+		"CorridorComponent.js"
+	]
+}

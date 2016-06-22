@@ -1,0 +1,1 @@
+.dragItem{float:left;width:100px;height:100px;vertical-align:middle;display:flex}.dragItem:hover{border:solid 1px #666}.dragItem.selected{border:solid 1px #39f;background-color:#222}.dragItem img{max-width:90px;max-height:90px;margin:auto}.dragItemSnapshot{position:absolute}.dragItemSnapshot img{max-width:45px;max-height:45px;border:dashed 1px #ff0}

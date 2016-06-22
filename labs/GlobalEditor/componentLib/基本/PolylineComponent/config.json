@@ -1,0 +1,6 @@
+{
+	"desc":"Polyline组件",
+	"require":[
+		"PolylineComponent.js"
+	]
+}

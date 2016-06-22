@@ -1,0 +1,6 @@
+{
+	"desc":"WebGL Globe组件",
+	"require":[
+		"WebGLGlobeComponent.js"
+	]
+}

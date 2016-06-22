@@ -1,0 +1,6 @@
+{
+	"desc":"Wall组件",
+	"require":[
+		"WallComponent.js"
+	]
+}

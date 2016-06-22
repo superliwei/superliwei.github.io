@@ -1,0 +1,6 @@
+{
+	"desc":"Billboard组件",
+	"require":[
+		"BillboardComponent.js"
+	]
+}
