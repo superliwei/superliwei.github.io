@@ -2,10 +2,52 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>GlobalEditor-留言</title>
+		<style>
+			html,body
+			{
+				margin: 0;
+			}
+			.topBar
+			{
+				width: 100%;
+				text-align: center;
+				background-color: #1B1C1D;
+			}
+			.topBar #logo
+			{
+				width: 150px;
+				height: 40px;
+				background-image: url(assets/image/logo.png);
+				background-size: contain;
+				background-repeat: no-repeat;
+				margin: auto;
+				display: table;
+				text-align:left;
+			}
+			.topBar #logo span
+			{
+				color: #FFFFFF;
+				font-family: "微软雅黑";
+				display: table-cell;
+				vertical-align:middle;
+				font-size: 16px;
+				padding-left: 40px;
+			}
+			
+			.content
+			{
+				padding: 20px;
+			}
+		</style>
 	</head>
 	<body>
-		<div id="uyan_frame"></div>
-		<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2104513"></script>
+		<div class="topBar">
+			<div id="logo"><span>GlobalEditor</span></div>
+		</div>
+		<div class="content">
+			<div id="uyan_frame"></div>
+			<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2104513"></script>
+		</div>
 	</body>
 </html>
