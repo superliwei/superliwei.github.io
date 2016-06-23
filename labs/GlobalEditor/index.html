@@ -28,6 +28,8 @@
 		<script src="assets/libs/tinyColorPicker-master/jqColorPicker.min.js"></script>
 		
 		<script src="assets/js/globaleditor.1.0.min.js"></script>
+		
+		<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2104513"></script>
 	</head>
 	<body>
 		<div id="preload"></div>
@@ -233,6 +235,10 @@
 			    	<div class="item">
 		    			<i class="info circle icon"></i>
 		    			<span class="text">关于GlobalEditor</span>
+		    		</div>
+		    		<div class="item">
+		    			<i class="comments outline icon"></i>
+		    			<span class="text">留言</span>
 		    		</div>
 	    		</div>
 		    </div>
@@ -751,6 +757,13 @@
 			<div class="actions">
 				<button class="ui primary button">确认</button>
 			</div>
+		</div>
+		
+		<!-- 在线留言 -->
+		<div id="uyan_frame" style="visibility: hidden"></div>
+		<div id="messageWin" class="ui modal">
+			<div class="header"><i class="comments outline icon"></i><label>留言</label></div>
+			<div class="content"></div>
 		</div>
 	</body>
 </html>
