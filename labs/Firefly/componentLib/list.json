@@ -1,1 +1,8 @@
-["Box","Label","Paragraph","HtmlContainer","ECharts"]
+[
+	"Box",
+	"Image",
+	"Label",
+	"Paragraph",
+	"HtmlContainer",
+	"ECharts"
+]

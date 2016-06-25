@@ -1,0 +1,7 @@
+{
+	"desc":"图片",
+	"require":[
+		"Image.js",
+		"ImageDescriptor.js"
+	]
+}

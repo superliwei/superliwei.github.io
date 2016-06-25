@@ -2,6 +2,8 @@
 	"desc":"单行文本",
 	"require":[
 		"Label.js",
+		"FontStyleDescItem.js",
+		"HAlignDescItem.js",
 		"LabelDescriptor.js"
 	]
 }
