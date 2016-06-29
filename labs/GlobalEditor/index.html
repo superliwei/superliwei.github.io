@@ -310,7 +310,21 @@
 					</div>
 					<div class="ui bottom attached tab segment active" data-tab="dataSource">
 						<div class="ui menu" style="margin-bottom: 5px;">
-							<a class="item"><i class="plus icon"></i></a>
+							<div class="ui dropdown item">
+				    			<i class="plus icon"></i>
+				    			<i class="dropdown icon"></i>
+				    			<div class="menu" style="min-width: 180px;">
+						    		<div class="item" data-value="add">
+						    			<i class="icon iconfont icon-data"></i>
+						    			<span class="text">添加数据源</span>
+						    		</div>
+						    		<div class="divider"></div>
+						    		<div class="item" data-value="import">
+						    			<i class="file outline text icon"></i>
+						    			<span class="text">从文件导入</span>
+						    		</div>
+				    			</div>
+				    		</div>
 							<a class="item"><i class="edit icon"></i></a>
 						</div>
 						<div id="itemContainer"></div>
