@@ -7,7 +7,8 @@
 			{"name":"CesiumMan","model":"Cesium_Man.glb"},
 			{"name":"CesiumMilkTruck","model":"CesiumMilkTruck.glb"},
 			{"name":"ShadowTester","model":"Shadow_Tester_2.gltf"},
-			{"name":"WoodTower","model":"Wood_Tower.gltf"}
+			{"name":"WoodTower","model":"Wood_Tower.gltf"},
+			{"name":"CesiumBalloon","model":"CesiumBalloon.glb"}
 		]
 	}
 ]
