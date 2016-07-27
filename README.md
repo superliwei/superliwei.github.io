@@ -14,6 +14,10 @@
 
     http://superliwei.github.io/labs/PageNodes/
 
+* 小宝宝认动物
+
+    https://itunes.apple.com/cn/app/xiao-bao-bao-ren-dong-wu/id1135162707?mt=8
+
 ###2015
 
 * Painter
