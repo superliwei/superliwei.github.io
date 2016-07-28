@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BasicCanvas>
+	<Label x="10" y="10" text="Label" color="#ffffff" background="#333333" padding="3" font-weight="bold"/>
+	<BasicCanvas x="10" y="40" background="#222222" width="780" height="460">
+		<Label id="label" x="10" y="10" text="hello Label !" color="#ffff00" font-weight="bold" font-size="26px" background="#444444" padding="10px"  font-style="italic" font-family="微软雅黑" text-decoration="underline"/>
+		<Button effect="alpha" touchMode="true">
+			<Label x="10" y="75" padding="3px" text="text0" border-radius="3px" background="#ffffff" />
+			<Click>
+				<CanvasEvent id="label" action="set" text="hello Label !" />
+			</Click>
+		</Button>
+		<Button effect="alpha" touchMode="true">
+			<Label x="60" y="75" padding="3px" text="text1" border-radius="3px" background="#ffffff" />
+			<Click>
+				<CanvasEvent id="label" action="set" text="我是中文!" />
+			</Click>
+		</Button>
+	</BasicCanvas>
+</BasicCanvas>

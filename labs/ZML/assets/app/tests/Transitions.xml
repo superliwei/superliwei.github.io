@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BasicCanvas>
+	<Label x="10" y="10" text="Transitions" color="#ffffff" background="#333333" padding="3" font-weight="bold"/>
+	<BasicCanvas x="10" y="40" background="#222222" width="780" height="460">
+		<NavigationController id="nav0" x="195" y="10" width="576" height="330">
+			<ImageCanvas source="img_0" scaleX="0.75" scaleY="0.75" />
+			<ImageCanvas source="img_1" scaleX="0.75" scaleY="0.75" />
+			<ImageCanvas source="img_2" scaleX="0.75" scaleY="0.75" />
+			<ImageCanvas source="img_3" scaleX="0.75" scaleY="0.75" />
+			<ImageCanvas source="img_4" scaleX="0.75" scaleY="0.75" />
+			<ImageCanvas source="img_5" scaleX="0.75" scaleY="0.75" />
+			<ImageCanvas source="img_6" scaleX="0.75" scaleY="0.75" />
+			<ImageCanvas source="img_7" scaleX="0.75" scaleY="0.75" />
+			<ImageCanvas source="img_8" scaleX="0.75" scaleY="0.75" />
+			<ImageCanvas source="img_9" scaleX="0.75" scaleY="0.75" />
+			<ImageCanvas source="img_10" scaleX="0.75" scaleY="0.75" />
+			<ImageCanvas source="img_11" scaleX="0.75" scaleY="0.75" />
+			<ImageCanvas source="img_12" scaleX="0.75" scaleY="0.75" />
+			<ImageCanvas source="img_13" scaleX="0.75" scaleY="0.75" />
+			<ImageCanvas source="img_14" scaleX="0.75" scaleY="0.75" />
+			<ImageCanvas source="img_15" scaleX="0.75" scaleY="0.75" />
+			<ImageCanvas source="img_16" scaleX="0.75" scaleY="0.75" />
+		</NavigationController>
+		<BasicCanvas x="10" y="10">
+			<BasicCanvas width="180" height="440" background="#444444" overflow="auto" overflow-x="hidden">
+				<Button position="static" height="24" margin-top="10px" margin-left="10px" effect="alpha" touchMode="true">
+					<Label padding="3px" text="none" border-radius="3px" background="#ffffff" />
+					<Click>
+						<NavigationEvent controllerId="nav0" showIdx="next" effect="none" />
+					</Click>
+				</Button>
+				<Button position="static" height="24" margin-top="5px" margin-left="10px" effect="alpha" touchMode="true">
+					<Label padding="3px" text="random" border-radius="3px" background="#ffffff" />
+					<Click>
+						<NavigationEvent controllerId="nav0" showIdx="next" effect="random" />
+					</Click>
+				</Button>
+				<Button position="static" height="24" margin-top="5px" margin-left="10px" effect="alpha" touchMode="true">
+					<Label padding="3px" text="leftMoveIn" border-radius="3px" background="#ffffff" />
+					<Click>
+						<NavigationEvent controllerId="nav0" showIdx="next" effect="leftMoveIn" />
+					</Click>
+				</Button>
+				<Button position="static" height="24" margin-top="5px" margin-left="10px" effect="alpha" touchMode="true">
+					<Label padding="3px" text="rightMoveIn" border-radius="3px" background="#ffffff" />
+					<Click>
+						<NavigationEvent controllerId="nav0" showIdx="next" effect="rightMoveIn" />
+					</Click>
+				</Button>
+				<Button position="static" height="24" margin-top="5px" margin-left="10px" effect="alpha" touchMode="true">
+					<Label padding="3px" text="upMoveIn" border-radius="3px" background="#ffffff" />
+					<Click>
+						<NavigationEvent controllerId="nav0" showIdx="next" effect="upMoveIn" />
+					</Click>
+				</Button>
+				<Button position="static" height="24" margin-top="5px" margin-left="10px" effect="alpha" touchMode="true">
+					<Label padding="3px" text="downMoveIn" border-radius="3px" background="#ffffff" />
+					<Click>
+						<NavigationEvent controllerId="nav0" showIdx="next" effect="downMoveIn" />
+					</Click>
+				</Button>
+				<Button position="static" height="24" margin-top="5px" margin-left="10px" effect="alpha" touchMode="true">
+					<Label padding="3px" text="alpha" border-radius="3px" background="#ffffff" />
+					<Click>
+						<NavigationEvent controllerId="nav0" showIdx="next" effect="alpha" />
+					</Click>
+				</Button>
+				<Button position="static" height="24" margin-top="5px" margin-left="10px" effect="alpha" touchMode="true">
+					<Label padding="3px" text="flyIn" border-radius="3px" background="#ffffff" />
+					<Click>
+						<NavigationEvent controllerId="nav0" showIdx="next" effect="flyIn" />
+					</Click>
+				</Button>
+				<Button position="static" height="24" margin-top="5px" margin-left="10px" effect="alpha" touchMode="true">
+					<Label padding="3px" text="flyOut" border-radius="3px" background="#ffffff" />
+					<Click>
+						<NavigationEvent controllerId="nav0" showIdx="next" effect="flyOut" />
+					</Click>
+				</Button>
+				<Button position="static" height="24" margin-top="5px" margin-left="10px" effect="alpha" touchMode="true">
+					<Label padding="3px" text="leftReverse" border-radius="3px" background="#ffffff" />
+					<Click>
+						<NavigationEvent controllerId="nav0" showIdx="next" effect="leftReverse" />
+					</Click>
+				</Button>
+				<Button position="static" height="24" margin-top="5px" margin-left="10px" effect="alpha" touchMode="true">
+					<Label padding="3px" text="rightReverse" border-radius="3px" background="#ffffff" />
+					<Click>
+						<NavigationEvent controllerId="nav0" showIdx="next" effect="rightReverse" />
+					</Click>
+				</Button>
+				<Button position="static" height="24" margin-top="5px" margin-left="10px" effect="alpha" touchMode="true">
+					<Label padding="3px" text="upReverse" border-radius="3px" background="#ffffff" />
+					<Click>
+						<NavigationEvent controllerId="nav0" showIdx="next" effect="upReverse" />
+					</Click>
+				</Button>
+				<Button position="static" height="24" margin-top="5px" margin-left="10px" effect="alpha" touchMode="true">
+					<Label padding="3px" text="downReverse" border-radius="3px" background="#ffffff" />
+					<Click>
+						<NavigationEvent controllerId="nav0" showIdx="next" effect="downReverse" />
+					</Click>
+				</Button>
+				<BasicCanvas position="static" height="10" />
+			</BasicCanvas>
+		</BasicCanvas>
+	</BasicCanvas>
+</BasicCanvas>

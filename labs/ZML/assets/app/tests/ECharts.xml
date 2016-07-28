@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BasicCanvas>
+	<Label x="10" y="10" text="ECharts" color="#ffffff" background="#333333" padding="3" font-weight="bold"/>
+	<BasicCanvas x="10" y="40" background="#222222" width="780" height="460">
+		<ECharts x="10" y="10" width="300" height="250" background="#ffffff">
+			<Option>
+				(function(){
+					var option = {
+						title: {text: 'ECharts 入门示例'},
+						tooltip: {},
+						legend: {data:['销量']},
+						xAxis: {data: ['衬衫','羊毛衫','雪纺衫','裤子','高跟鞋','袜子']},
+						yAxis: {},
+						series: [{name: '销量',type: 'bar',data: [5, 20, 36, 10, 10, 20]}]
+					}
+					return option;
+				})();
+			</Option>
+		</ECharts>
+		<ECharts x="400" y="10" width="300" height="250" background="#ffffff">
+			<Option>
+				(function(){
+					var data = [];
+					
+					for (var i = 0; i <= 360; i++) {
+					    var t = i / 180 * Math.PI;
+					    var r = Math.sin(2 * t) * Math.cos(2 * t);
+					    data.push([r, i]);
+					}
+					var option = {
+					    title: {
+					        text: '极坐标双数值轴'
+					    },
+					    legend: {
+					        data: ['line']
+					    },
+					    polar: {
+					        center: ['50%', '54%']
+					    },
+					    tooltip: {
+					        trigger: 'axis',
+					        axisPointer: {
+					            type: 'cross'
+					        }
+					    },
+					    angleAxis: {
+					        type: 'value',
+					        startAngle: 0
+					    },
+					    radiusAxis: {
+					        min: 0
+					    },
+					    series: [{
+					        coordinateSystem: 'polar',
+					        name: 'line',
+					        type: 'line',
+					        showSymbol: false,
+					        data: data
+					    }],
+					    animationDuration: 2000
+					};
+					return option;
+				})();
+			</Option>
+		</ECharts>
+	</BasicCanvas>
+</BasicCanvas>

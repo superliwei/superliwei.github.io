@@ -1,0 +1,1 @@
+ZML.BasicCanvas.prototype.alpha=function(a){this.view.css("opacity",a);this.view.css("-webkit-opacity",a);this.view.css("-moz-opacity",a);this.view.css("-khtml-opacity",a);this.view.css("filter","alpha(opacity="+a*100+")")};

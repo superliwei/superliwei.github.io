@@ -1,0 +1,1 @@
+ZML.Transition.Random=function(c,d,e,f){var b=[],a;for(a in ZML.TransitionMap)a!="none"&&a!="random"&&b.push(ZML.TransitionMap[a]);this.effect=new (b[Math.round(Math.random()*(b.length-1))])(c,d,e,f)};ZML.Transition.Random.prototype.dispose=function(){if(this.effect)this.effect.dispose(),this.effect=null};ZML.TransitionMap.random=ZML.Transition.Random;

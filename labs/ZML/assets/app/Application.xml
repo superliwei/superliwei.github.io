@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application>
+	<NavigationController id="mainNav" width="800" height="540" manager="BasicNavigationManager">
+		<BasicComponent url="tests/ECharts.xml" />
+		<BasicComponent url="tests/ImageCanvas.xml" />
+		<BasicComponent url="tests/BasicCanvas.xml" />
+		<BasicComponent url="tests/Transitions.xml" />
+		<BasicComponent url="tests/Eval.xml" />
+		<BasicComponent url="tests/VideoCanvas.xml" />
+		<BasicComponent url="tests/HtmlCanvas.xml" />
+		<BasicComponent url="tests/ButtonEffect.xml" />
+		<BasicComponent url="tests/Tween.xml" />
+		<BasicComponent url="tests/NavigationController.xml" />
+		<BasicComponent url="tests/ImageAsset.xml" />
+		<BasicComponent url="tests/ImageButton.xml" />
+		<BasicComponent url="tests/BasicComponent.xml" />
+		<BasicComponent url="tests/Label.xml" />
+		<BasicComponent url="tests/Button.xml" />
+		<BasicComponent url="tests/BasicMovieClip.xml" />
+	</NavigationController>
+
+	<Events id="updatePageInfo">
+		<eval>
+			var mainNav = ZML.find("#mainNav");
+			var current = mainNav.defaultIdx+1;
+			var total = mainNav.managerInstance.children.length;
+			var str=current+"/"+total;
+			var navInfo = ZML.find("#navInfo");
+			navInfo.view.text(str);
+		</eval>
+	</Events>
+
+	<Button effect="alpha" touchMode="true">
+		<Label x="715" y="508" padding="3px" text="pre" border-radius="3px" background="#ffffff" />
+		<Click>
+			<NavigationEvent controllerId="mainNav" showIdx="pre" />
+			<Events src="updatePageInfo"/>
+		</Click>
+	</Button>
+	<Button effect="alpha" touchMode="true">
+		<Label x="753" y="508" padding="3px" text="next" border-radius="3px" background="#ffffff" />
+		<Click>
+			<NavigationEvent controllerId="mainNav" showIdx="next" />
+			<Events src="updatePageInfo"/>
+		</Click>
+	</Button>
+	<Label id="navInfo" color="#ffffff" y="512" x="605" width="100" text-align="right">
+		<Ready>
+			<Events src="updatePageInfo"/>
+		</Ready>
+	</Label>
+	<BasicCanvas x="10" y="508" width="500">
+		<ImageCanvas position="static" float="left" url="images/browser/chrome.png" img="width:25,height:25" width="25" height="25" margin-right="5px" alpha="1" />
+		<ImageCanvas position="static" float="left" url="images/browser/safari.png" img="width:25,height:25" width="25" height="25" margin-right="5px" alpha="0.2" />
+		<ImageCanvas position="static" float="left" url="images/browser/firefox.png" img="width:25,height:25" width="25" height="25" margin-right="5px" alpha="0.2" />
+		<ImageCanvas position="static" float="left" url="images/browser/ie.png" img="width:25,height:25" width="25" height="25" margin-right="5px" alpha="0.2" />
+		<ImageCanvas position="static" float="left" url="images/browser/opera.png" img="width:25,height:25" width="25" height="25" margin-right="5px" alpha="0.2" />
+	</BasicCanvas>
+</Application>

@@ -1,0 +1,1 @@
+ZML.Eval=function(){function a(){}a.prototype=new ZML.Event("EvalEvent");a.prototype.construct=function(a){this.data=a};a.init=function(){ZML.BroadcastCenter.addEventListener(a.prototype.type,function(a,b){var c=$(b).text();eval(c)})};ZML.FactoryMap.EVAL=a;a.init();return a}();

@@ -1,0 +1,2 @@
+ZML.ButtonEffectMap.alpha=function(a){function c(){TweenLite.to(a.view,0.5,{alpha:0.5})}function b(){TweenLite.to(a.view,0.5,{alpha:1})}a.data.attr("touchMode")=="true"?(a.view.bind("mousedown",c),a.view.bind("mouseout",b),$(document).bind("mouseup",b)):(a.view.bind("mouseover",c),a.view.bind("mouseout",b));this.dispose=function(){a.data.attr("touchMode")=="true"?(a.view.unbind("mousedown",c),a.view.unbind("mouseout",b),$(document).unbind("mouseup",b)):(a.view.unbind("mouseover",c),a.view.unbind("mouseout",
+b))}};

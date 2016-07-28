@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BasicCanvas>
+	<Label x="10" y="10" text="ImageAsset" color="#ffffff" background="#333333" padding="3" font-weight="bold"/>
+	<ImageAsset id="img_0" url="images/nav/01.jpg" />
+	<ImageAsset id="img_1" url="images/nav/02.jpg" />
+	<ImageAsset id="img_2" url="images/nav/03.jpg" />
+	<ImageAsset id="img_3" url="images/nav/04.jpg" />
+	<ImageAsset id="img_4" url="images/nav/05.jpg" />
+	<ImageAsset id="img_5" url="images/nav/06.jpg" />
+	<ImageAsset id="img_6" url="images/nav/07.jpg" />
+	<ImageAsset id="img_7" url="images/nav/08.jpg" />
+	<ImageAsset id="img_8" url="images/nav/09.jpg" />
+	<ImageAsset id="img_9" url="images/nav/10.jpg" />
+	<ImageAsset id="img_10" url="images/nav/11.jpg" />
+	<ImageAsset id="img_11" url="images/nav/12.jpg" />
+	<ImageAsset id="img_12" url="images/nav/13.jpg" />
+	<ImageAsset id="img_13" url="images/nav/14.jpg" />
+	<ImageAsset id="img_14" url="images/nav/15.jpg" />
+	<ImageAsset id="img_15" url="images/nav/16.jpg" />
+	<ImageAsset id="img_16" url="images/nav/17.jpg" />
+	<ImageAsset id="img_bt" url="images/imageButton.png" />
+	<BasicCanvas x="10" y="40" background="#222222" width="780" height="460">
+		<ImageCanvas x="10" y="10" source="img_1" scaleX="0.5" scaleY="0.5" />
+		<ImageCanvas x="405" y="10" source="img_1" scaleX="0.3" scaleY="0.3" />
+		<ImageButton x="10" y="250" source="img_bt" effect="alpha" />
+		<ImageButton x="180" y="250" source="img_bt" effect="alpha" scaleX="0.6" scaleY="0.6" />
+	</BasicCanvas>
+</BasicCanvas>

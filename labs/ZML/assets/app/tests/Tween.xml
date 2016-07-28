@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BasicCanvas>
+	<Label x="10" y="10" text="Tween" color="#ffffff" background="#333333" padding="3" font-weight="bold"/>
+	<BasicCanvas x="10" y="40" background="#222222" width="780" height="460">
+		<BasicCanvas x="10" y="10" border="solid 1px #333333" width="550" height="350">
+			<BasicCanvas id="box" x="275" y="175">
+				<BasicCanvas id="box_canvas" width="100" height="100" border="solid 1px #ffffff" background="#111111" x="-50" y="-50" />
+			</BasicCanvas>
+		</BasicCanvas>
+		<BasicCanvas x="570" y="10" width="200" height="350" border="solid 1px #333333">
+			<BasicCanvas border-bottom="solid 1px #333333" width="200" height="315" overflow="auto">
+				<Button position="static" height="24" margin-top="5px" margin-left="5px" effect="alpha" touchMode="true">
+					<Label padding="3px" text="x:175,y:75" border-radius="3px" background="#ffffff" />
+					<Click>
+						<Tween target="box" duration="0.5" x="175" y="75" />
+						<CanvasEvent id="info" action="set" html="content">
+							<content>
+								<div>
+									&lt;Tween target="box" duration="0.5" x="175" y="75" /&gt;
+								</div>
+							</content>
+						</CanvasEvent>
+					</Click>
+				</Button>
+				<Button position="static" height="24" margin-top="5px" margin-left="5px" effect="alpha" touchMode="true">
+					<Label padding="3px" text="width:150,height:150" border-radius="3px" background="#ffffff" />
+					<Click>
+						<Tween target="box_canvas" duration="0.5" width="150" height="150" />
+						<CanvasEvent id="info" action="set" html="content">
+							<content>
+								<div>
+									&lt;Tween target="box_canvas" duration="0.5" width="150" height="150" /&gt;
+								</div>
+							</content>
+						</CanvasEvent>
+					</Click>
+				</Button>
+				<Button position="static" height="24" margin-top="5px" margin-left="5px" effect="alpha" touchMode="true">
+					<Label padding="3px" text="scaleX:1.5,scaleY:1.5" border-radius="3px" background="#ffffff" />
+					<Click>
+						<Tween target="box" duration="0.5" scaleX="1.5" scaleY="1.5" />
+						<CanvasEvent id="info" action="set" html="content">
+							<content>
+								<div>
+									&lt;Tween target="box" duration="0.5" scaleX="1.5" scaleY="1.5" /&gt;
+								</div>
+							</content>
+						</CanvasEvent>
+					</Click>
+				</Button>
+				<Button position="static" height="24" margin-top="5px" margin-left="5px" effect="alpha" touchMode="true">
+					<Label padding="3px" text="scale:1.5,rotation:45" border-radius="3px" background="#ffffff" />
+					<Click>
+						<Tween target="box" duration="0.5" scale="1.5" rotation="45" />
+						<CanvasEvent id="info" action="set" html="content">
+							<content>
+								<div>
+									&lt;Tween target="box" duration="0.5" scale="1.5" rotation="45" /&gt;
+								</div>
+							</content>
+						</CanvasEvent>
+					</Click>
+				</Button>
+				<Button position="static" height="24" margin-top="5px" margin-left="5px" effect="alpha" touchMode="true">
+					<Label padding="3px" text="rotationX:45,rotationY:45" border-radius="3px" background="#ffffff" />
+					<Click>
+						<Tween target="box" duration="0.5" rotationX="45" rotationY="45" />
+						<CanvasEvent id="info" action="set" html="content">
+							<content>
+								<div>
+									&lt;Tween target="box" duration="0.5" rotationX="45" rotationY="45" /&gt;
+								</div>
+							</content>
+						</CanvasEvent>
+					</Click>
+				</Button>
+				<Button position="static" height="24" margin-top="5px" margin-left="5px" effect="alpha" touchMode="true">
+					<Label padding="3px" text="z:-1000" border-radius="3px" background="#ffffff" />
+					<Click>
+						<Tween target="box" duration="0.5" z="-1000" />
+						<CanvasEvent id="info" action="set" html="content">
+							<content>
+								<div>
+									&lt;Tween target="box" duration="0.5" z="-1000" /&gt;
+								</div>
+							</content>
+						</CanvasEvent>
+					</Click>
+				</Button>
+				<Button position="static" height="24" margin-top="5px" margin-left="5px" effect="alpha" touchMode="true">
+					<Label padding="3px" text="alpha:0.3" border-radius="3px" background="#ffffff" />
+					<Click>
+						<Tween target="box" duration="0.5" alpha="0.3" />
+						<CanvasEvent id="info" action="set" html="content">
+							<content>
+								<div>
+									&lt;Tween target="box" duration="0.5" alpha="0.3" /&gt;
+								</div>
+							</content>
+						</CanvasEvent>
+					</Click>
+				</Button>
+				<Button position="static" height="24" margin-top="5px" margin-left="5px" effect="alpha" touchMode="true">
+					<Label padding="3px" text="autoAlpha:0" border-radius="3px" background="#ffffff" />
+					<Click>
+						<Tween target="box" duration="0.5" autoAlpha="0" />
+						<CanvasEvent id="info" action="set" html="content">
+							<content>
+								<div>
+									&lt;Tween target="box" duration="0.5" autoAlpha="0" /&gt;
+								</div>
+							</content>
+						</CanvasEvent>
+					</Click>
+				</Button>
+				<Button position="static" height="24" margin-top="5px" margin-left="5px" effect="alpha" touchMode="true">
+					<Label padding="3px" text="autoAlpha:1" border-radius="3px" background="#ffffff" />
+					<Click>
+						<Tween target="box" duration="0.5" autoAlpha="1" />
+						<CanvasEvent id="info" action="set" html="content">
+							<content>
+								<div>
+									&lt;Tween target="box" duration="0.5" autoAlpha="1" /&gt;
+								</div>
+							</content>
+						</CanvasEvent>
+					</Click>
+				</Button>
+				<Button position="static" height="24" margin-top="5px" margin-left="5px" effect="alpha" touchMode="true">
+					<Label padding="3px" text="border:10px&nbsp;#ff0000" border-radius="3px" background="#ffffff" />
+					<Click>
+						<Tween target="box_canvas" duration="0.5" border="10px #ff0000" />
+						<CanvasEvent id="info" action="set" html="content">
+							<content>
+								<div>
+									&lt;Tween target="box_canvas" duration="0.5" border="10px #ff0000" /&gt;
+								</div>
+							</content>
+						</CanvasEvent>
+					</Click>
+				</Button>
+				<Button position="static" height="24" margin-top="5px" margin-left="5px" effect="alpha" touchMode="true">
+					<Label padding="3px" text="backgroundColor:#ffff00" border-radius="3px" background="#ffffff" />
+					<Click>
+						<Tween target="box_canvas" duration="0.5" backgroundColor="#ffff00" />
+						<CanvasEvent id="info" action="set" html="content">
+							<content>
+								<div>
+									&lt;Tween target="box_canvas" duration="0.5" backgroundColor="#ffff00" /&gt;
+								</div>
+							</content>
+						</CanvasEvent>
+					</Click>
+				</Button>
+				<Button position="static" height="24" margin-top="5px" margin-left="5px" effect="alpha" touchMode="true">
+					<Label width="150" padding="3px" text="border-radius:20px" border-radius="3px" background="#ffffff" />
+					<Click>
+						<Tween target="box_canvas" duration="0.5" border-radius="20px" />
+						<CanvasEvent id="info" action="set" html="content">
+							<content>
+								<div>
+									&lt;Tween target="box_canvas" duration="0.5" border-radius="20px" /&gt;
+								</div>
+							</content>
+						</CanvasEvent>
+					</Click>
+				</Button>
+				<Button position="static" height="24" margin-top="5px" margin-left="5px" effect="alpha" touchMode="true">
+					<Label padding="3px" text="action:from&nbsp;x:0" border-radius="3px" background="#ffffff" />
+					<Click>
+						<Tween action="from" target="box" duration="0.5" x="0" />
+						<CanvasEvent id="info" action="set" html="content">
+							<content>
+								<div>
+									&lt;Tween action="from" target="box" duration="0.5" x="0" /&gt;
+								</div>
+							</content>
+						</CanvasEvent>
+					</Click>
+				</Button>
+				<Button position="static" height="24" margin-top="5px" margin-left="5px" effect="alpha" touchMode="true">
+					<Label padding="3px" text="action:fromTo&nbsp;x:10,275" border-radius="3px" background="#ffffff" />
+					<Click>
+						<Tween action="fromTo" target="box" duration="0.5" x="10,275" />
+						<CanvasEvent id="info" action="set" html="content">
+							<content>
+								<div>
+									&lt;Tween action="fromTo" target="box" duration="0.5" x="10,275" /&gt;
+								</div>
+							</content>
+						</CanvasEvent>
+					</Click>
+				</Button>
+				<Button position="static" height="24" margin-top="5px" margin-left="5px" effect="alpha" touchMode="true">
+					<Label padding="3px" text="ease:Expo.easeInOut&nbsp;x:55" border-radius="3px" background="#ffffff" />
+					<Click>
+						<Tween target="box" duration="1" x="55" ease="Expo.easeInOut" />
+						<CanvasEvent id="info" action="set" html="content">
+							<content>
+								<div>
+									&lt;Tween target="box" duration="1" x="55" ease="Expo.easeInOut" /&gt;
+								</div>
+							</content>
+						</CanvasEvent>
+					</Click>
+				</Button>
+				<Button position="static" height="24" margin-top="5px" margin-left="5px" effect="alpha" touchMode="true">
+					<Label padding="3px" text="id:tween0,delay:1" border-radius="3px" background="#ffffff" />
+					<Click>
+						<Tween id="tween0" target="box" duration="1" x="55" delay="1" />
+						<CanvasEvent id="info" action="set" html="content">
+							<content>
+								<div>
+									&lt;Tween id="tween0" target="box" duration="1" x="55" delay="1" /&gt;
+								</div>
+							</content>
+						</CanvasEvent>
+					</Click>
+				</Button>
+				<Button position="static" height="24" margin-top="5px" margin-left="5px" effect="alpha" touchMode="true">
+					<Label padding="3px" text="id:tween0,action:kill" border-radius="3px" background="#ffffff" />
+					<Click>
+						<Tween id="tween0" action="kill" />
+						<CanvasEvent id="info" action="set" html="content">
+							<content>
+								<div>
+									&lt;Tween id="tween0" action="kill" /&gt;
+								</div>
+							</content>
+						</CanvasEvent>
+					</Click>
+				</Button>
+				<Button position="static" height="24" margin-top="5px" margin-left="5px" effect="alpha" touchMode="true">
+					<Label padding="3px" text="id:tween0,action:pause" border-radius="3px" background="#ffffff" />
+					<Click>
+						<Tween id="tween0" action="pause" />
+						<CanvasEvent id="info" action="set" html="content">
+							<content>
+								<div>
+									&lt;Tween id="tween0" action="pause" /&gt;
+								</div>
+							</content>
+						</CanvasEvent>
+					</Click>
+				</Button>
+				<Button position="static" height="24" margin-top="5px" margin-left="5px" effect="alpha" touchMode="true">
+					<Label padding="3px" text="id:tween0,action:play" border-radius="3px" background="#ffffff" />
+					<Click>
+						<Tween id="tween0" action="play" />
+						<CanvasEvent id="info" action="set" html="content">
+							<content>
+								<div>
+									&lt;Tween id="tween0" action="play" /&gt;
+								</div>
+							</content>
+						</CanvasEvent>
+					</Click>
+				</Button>
+				<Button position="static" height="24" margin-top="5px" margin-left="5px" effect="alpha" touchMode="true">
+					<Label padding="3px" text="id:tween0,action:restart" border-radius="3px" background="#ffffff" />
+					<Click>
+						<Tween id="tween0" action="restart" />
+						<CanvasEvent id="info" action="set" html="content">
+							<content>
+								<div>
+									&lt;Tween id="tween0" action="restart" /&gt;
+								</div>
+							</content>
+						</CanvasEvent>
+					</Click>
+				</Button>
+				<Button position="static" height="24" margin-top="5px" margin-left="5px" effect="alpha" touchMode="true">
+					<Label padding="3px" text="id:tween0,action:resume" border-radius="3px" background="#ffffff" />
+					<Click>
+						<Tween id="tween0" action="resume" />
+						<CanvasEvent id="info" action="set" html="content">
+							<content>
+								<div>
+									&lt;Tween id="tween0" action="resume" /&gt;
+								</div>
+							</content>
+						</CanvasEvent>
+					</Click>
+				</Button>
+				<Button position="static" height="24" margin-top="5px" margin-left="5px" effect="alpha" touchMode="true">
+					<Label padding="3px" text="id:tween0,action:reverse" border-radius="3px" background="#ffffff" />
+					<Click>
+						<Tween id="tween0" action="reverse" />
+						<CanvasEvent id="info" action="set" html="content">
+							<content>
+								<div>
+									&lt;Tween id="tween0" action="reverse" /&gt;
+								</div>
+							</content>
+						</CanvasEvent>
+					</Click>
+				</Button>
+				<Button position="static" height="24" margin-top="5px" margin-left="5px" effect="alpha" touchMode="true">
+					<Label padding="3px" text="action:killTweensOf" border-radius="3px" background="#ffffff" />
+					<Click>
+						<Tween action="killTweensOf" target="box" />
+						<CanvasEvent id="info" action="set" html="content">
+							<content>
+								<div>
+									&lt;Tween action="killTweensOf" target="box" /&gt;
+								</div>
+							</content>
+						</CanvasEvent>
+					</Click>
+				</Button>
+				<Button position="static" height="24" margin-top="5px" margin-left="5px" effect="alpha" touchMode="true">
+					<Label padding="3px" text="onStart,onUpdate,onComplete" border-radius="3px" background="#ffffff" />
+					<Click>
+						<Tween target="box" duration="0.5" x="100">
+							<onStart>
+								<CanvasEvent id="box_canvas" action="set" background="#ff0000" />
+							</onStart>
+							<onUpdate>
+								<CanvasEvent id="box_canvas" action="set" background="#ffff00" />
+							</onUpdate>
+							<onComplete>
+								<CanvasEvent id="box_canvas" action="set" background="#111111" />
+							</onComplete>
+						</Tween>
+						<CanvasEvent id="info" action="set" html="content">
+							<content>
+								<div>
+									&lt;Tween target="box" duration="0.5" x="100"&gt;<br/>
+						&nbsp;&nbsp;	&lt;onStart&gt;<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;		&lt;CanvasEvent id="box_canvas" action="set" background="#ff0000" /&gt;<br/>
+						&nbsp;&nbsp;	&lt;/onStart&gt;<br/>
+						&nbsp;&nbsp;	&lt;onUpdate&gt;<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;		&lt;CanvasEvent id="box_canvas" action="set" background="#ffff00" /&gt;<br/>
+						&nbsp;&nbsp;	&lt;/onUpdate&gt;<br/>
+						&nbsp;&nbsp;	&lt;onComplete&gt;<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;		&lt;CanvasEvent id="box_canvas" action="set" background="#111111" /&gt;<br/>
+						&nbsp;&nbsp;	&lt;/onComplete&gt;<br/>
+									&lt;/Tween&gt;
+								</div>
+							</content>
+						</CanvasEvent>
+					</Click>
+				</Button>
+				<Button position="static" height="24" margin-top="5px" margin-left="5px" effect="alpha" touchMode="true">
+					<Label padding="3px" text="Delay&nbsp;time:1" border-radius="3px" background="#ffffff" />
+					<Click>
+						<Delay id="delay0" time="1">
+							<CanvasEvent id="box_canvas" action="set" background="#ff0000" />
+						</Delay>
+						<CanvasEvent id="info" action="set" html="content">
+							<content>
+								<div>
+									&lt;Delay id="delay0" time="1"&gt;<br/>
+						&nbsp;&nbsp;	&lt;CanvasEvent id="box_canvas" action="set" background="#ff0000" /&gt;<br/>
+									&lt;/Delay&gt;
+								</div>
+							</content>
+						</CanvasEvent>
+					</Click>
+				</Button>
+				<Button position="static" height="24" margin-top="5px" margin-left="5px" effect="alpha" touchMode="true">
+					<Label padding="3px" text="Delay&nbsp;action:kill" border-radius="3px" background="#ffffff" />
+					<Click>
+						<Delay id="delay0" action="kill" />
+						<CanvasEvent id="info" action="set" html="content">
+							<content>
+								<div>
+									&lt;Delay id="delay0" action="kill" /&gt;
+								</div>
+							</content>
+						</CanvasEvent>
+					</Click>
+				</Button>
+				<BasicCanvas width="5" height="5" />
+			</BasicCanvas>
+			<Button effect="alpha" touchMode="true">
+				<Label x="5" y="320" padding="3px" text="reset" border-radius="3px" background="#6666ff" color="#ffffff" />
+				<Click>
+					<Tween action="killTweensOf" target="box" />
+					<Tween action="killTweensOf" target="box_canvas" />
+					<CanvasEvent id="box" action="set" x="275" y="175" scaleX="1" scaleY="1"/>
+					<Tween target="box" duration="0" scale="1" rotation="0" rotationX="0" rotationY="0" z="0" autoAlpha="1" />
+					<CanvasEvent id="box_canvas" action="set" width="100" height="100" border="solid 1px #ffffff" background="#111111" border-radius="0px" />
+					<Delay id="delay0" action="kill" />
+					<CanvasEvent id="info" action="set" html="content">
+						<content>
+							<div>
+								基本用法:<br>
+								&lt;Tween target="box" duration="0.5" x="10" /&gt;
+							</div>
+						</content>
+					</CanvasEvent>
+				</Click>
+			</Button>
+		</BasicCanvas>
+		<BasicCanvas x="10" y="365" border="solid 1px #333333" width="760" height="90" background="#000000" overflow="auto">
+			<HtmlCanvas id="info" color="#ffffff" padding="5px">
+				<div>
+					基本用法:<br>
+					&lt;Tween target="box" duration="0.5" x="10" /&gt;
+				</div>
+			</HtmlCanvas>
+		</BasicCanvas>
+	</BasicCanvas>
+</BasicCanvas>

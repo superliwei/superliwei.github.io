@@ -1,0 +1,2 @@
+ZML.Alert=function(){function a(){}a.prototype=new ZML.Event("Alert");a.prototype.construct=function(a){this.data=a};a.init=function(){ZML.BroadcastCenter.addEventListener(a.prototype.type,function(a,b){if($(b).attr("msg")!=void 0)alert($(b).attr("msg"));else if($(b).attr("prop")!=void 0)alert($("#"+$(b).attr("id")).prop($(b).attr("prop")));else if($(b).attr("attr")!=void 0){var c=$("#"+$(b).attr("id")).attr($(b).attr("attr")),c=c==void 0?$("#"+$(b).attr("id")).css($(b).attr("attr")):c;alert(c)}})};
+ZML.FactoryMap.ALERT=a;a.init();return a}();

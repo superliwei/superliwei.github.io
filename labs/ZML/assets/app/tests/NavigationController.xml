@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BasicCanvas>
+	<Label x="10" y="10" text="NavigationController" color="#ffffff" background="#333333" padding="3" font-weight="bold"/>
+	<BasicCanvas x="10" y="40" background="#222222" width="780" height="460">
+		<NavigationController id="nav" x="10" y="10" width="384" height="220">
+			<ImageCanvas source="img_0" scaleX="0.5" scaleY="0.5" />
+			<ImageCanvas source="img_1" scaleX="0.5" scaleY="0.5" />
+			<ImageCanvas source="img_2" scaleX="0.5" scaleY="0.5" />
+			<ImageCanvas source="img_3" scaleX="0.5" scaleY="0.5" />
+			<ImageCanvas source="img_4" scaleX="0.5" scaleY="0.5" />
+			<ImageCanvas source="img_5" scaleX="0.5" scaleY="0.5" />
+			<ImageCanvas source="img_6" scaleX="0.5" scaleY="0.5" />
+			<ImageCanvas source="img_7" scaleX="0.5" scaleY="0.5" />
+			<ImageCanvas source="img_8" scaleX="0.5" scaleY="0.5" />
+			<ImageCanvas source="img_9" scaleX="0.5" scaleY="0.5" />
+			<ImageCanvas source="img_10" scaleX="0.5" scaleY="0.5" />
+			<ImageCanvas source="img_11" scaleX="0.5" scaleY="0.5" />
+			<ImageCanvas source="img_12" scaleX="0.5" scaleY="0.5" />
+			<ImageCanvas source="img_13" scaleX="0.5" scaleY="0.5" />
+			<ImageCanvas source="img_14" scaleX="0.5" scaleY="0.5" />
+			<ImageCanvas source="img_15" scaleX="0.5" scaleY="0.5" />
+			<ImageCanvas source="img_16" scaleX="0.5" scaleY="0.5" />
+		</NavigationController>
+		<Button effect="alpha" touchMode="true">
+			<Label x="10" y="240" padding="3px" text="pre" border-radius="3px" background="#ffffff" />
+			<Click>
+				<NavigationEvent controllerId="nav" showIdx="pre" />
+			</Click>
+		</Button>
+		<Button effect="alpha" touchMode="true">
+			<Label x="48" y="240" padding="3px" text="next" border-radius="3px" background="#ffffff" />
+			<Click>
+				<NavigationEvent controllerId="nav" showIdx="next" />
+			</Click>
+		</Button>
+		<Button effect="alpha" touchMode="true">
+			<Label x="92" y="240" padding="3px" text="showIdx:3" border-radius="3px" background="#ffffff" />
+			<Click>
+				<NavigationEvent controllerId="nav" showIdx="3">
+					<onComplete>
+						<Alert msg="complete"/>
+					</onComplete>
+				</NavigationEvent>
+			</Click>
+		</Button>
+	</BasicCanvas>
+</BasicCanvas>

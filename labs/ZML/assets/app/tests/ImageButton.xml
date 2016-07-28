@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BasicCanvas>
+	<Label x="10" y="10" text="ImageButton" color="#ffffff" background="#333333" padding="3" font-weight="bold"/>
+	<BasicCanvas x="10" y="40" background="#222222" width="780" height="460">
+		<ImageButton id="imageBt" x="10" y="10" url="images/imageButton.png" preload="true" effect="alpha">
+			<Click>
+				<Alert msg="ImageButton Clicked !" />
+			</Click>
+		</ImageButton>
+
+		<Button effect="alpha" touchMode="true">
+			<Label x="200" y="22" padding="3px" text="enable" border-radius="3px" background="#ffffff" />
+			<Click>
+				<CanvasEvent id="imageBt" action="set" enabled="true" />
+			</Click>
+		</Button>
+		<Button effect="alpha" touchMode="true">
+			<Label x="260" y="22" padding="3px" text="disable" border-radius="3px" background="#ffffff" />
+			<Click>
+				<CanvasEvent id="imageBt" action="set" enabled="false" />
+			</Click>
+		</Button>
+	</BasicCanvas>
+</BasicCanvas>

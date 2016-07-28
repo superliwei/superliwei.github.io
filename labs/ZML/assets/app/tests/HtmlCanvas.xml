@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BasicCanvas>
+	<Label x="10" y="10" text="HtmlCanvas" color="#ffffff" background="#333333" padding="3" font-weight="bold"/>
+	<BasicCanvas x="10" y="40" background="#222222" width="780" height="460">
+		<HtmlCanvas x="10" y="10">
+			<style>
+				.test
+				{
+					border:solid 1px #ffffff;
+					color:#999999;
+					padding:10px;
+				}
+				.bt
+				{
+					padding:5px;
+					background:#ffffff;
+					border-radius:5px;
+					cursor:pointer;
+					float:left;
+					margin-top:10px;
+					margin-right:10px;
+				}
+			</style>
+			<script>
+				$(".bt").eq(0).click(function(){
+					alert("hello javascript!");
+				});
+				$(".bt").eq(1).click(function(){
+					ZML.BroadcastCenter.sendEvent("<events><Alert msg=\"event from HtmlCanvas!\" /></events>");
+				});
+				ZML.BroadcastCenter.addEventListener(ZML.CanvasEvent.prototype.type,function(event,data){
+					if($(data).attr("param")!=undefined && $(data).attr("param")=="htmlCanvas")
+					{
+						alert("HtmlCanvas:i got your event!");
+					}
+
+					if($(data).attr("action")=="setRandomContent")
+					{
+						setRandomContent();
+					}
+				});
+
+				function setRandomContent()
+				{
+					var contents = [
+						"省省吧，顺丰虽然贵那么点，不过运送的东西有保障，不像其他邮寄一个南瓜回家，家里收到的估计就是南瓜饼了",
+						"圆通打算开拓香港线路，买豪宅只是为了做分拨中心。",
+						"声卡、音箱、音箱、功放等电脑音频设备都在没落，没落的原因是因为几乎所有的音频设备没有一款像样的跑分软件。",
+						"为什么新闻上的那些奇葩都有老婆或者女朋友！！！",
+						"最省流量的就是chrome 打开云加速之后 全部是not found 404 ，基本上不要流量",
+						"这些套餐就是认为我们通话的不上网，上网的不通话，出差的不回家，在家的不出门。就没有一个套餐通话上网接听漫游都均衡的！要不是垄断你们早倒闭了",
+						"别整这些没用的，我就要香港那个套餐",
+						"顶尖围棋选手不是程序员--",
+						"假如你心中的女神天天转发这些到朋友圈，你还会喜欢她吗? 我就碰到过，我还劝她别发了，并且告诉她这些都不科学，她居然说，相信总比不信好，万一是真的呢?然后我就不喜欢她了，虽然她从来没喜欢过我。"
+					];
+					var len = contents.length;
+					var idx = Math.round(Math.random()*(len-1));
+					var str = "<events><CanvasEvent id=\"htmlCanvas0\" action=\"set\" html=\"content\">";
+					str+="<content>"+contents[idx]+"</content>";
+					str+="</CanvasEvent></events>";
+					ZML.BroadcastCenter.sendEvent(str);
+				}
+			</script>
+			<div class="test">hello css!</div>
+			<div class="bt">click me !</div>
+			<div class="bt">send event to framework!</div>
+		</HtmlCanvas>
+
+		<Button effect="alpha" touchMode="true">
+			<Label x="10" y="100" padding="3px" text="send&nbsp;to&nbsp;HtmlCanvas!" border-radius="3px" background="#3333ff" color="#ffffff" />
+			<Click>
+				<CanvasEvent param="htmlCanvas" />
+			</Click>
+		</Button>
+		<BasicCanvas x="10" y="135" width="400" height="50" border="solid 1px #333333">
+			<HtmlCanvas id="htmlCanvas0" margin="5px" color="#ffffff" font-size="11px">
+				random it!
+			</HtmlCanvas>
+		</BasicCanvas>
+		<Button effect="alpha" touchMode="true">
+			<Label x="10" y="195" padding="3px" text="set&nbsp;random&nbsp;content!" border-radius="3px" background="#ff3333" color="#ffffff" />
+			<Click>
+				<CanvasEvent canvas="htmlCanvas0" action="setRandomContent" />
+			</Click>
+		</Button>
+		<HtmlCanvas x="10" y="225">
+			<svg height="200px" width="200px" style="border-style:solid;border-width:2px;background:#ffffff">
+				<line x1="0" y1="0" x2="200" y2="200" style="stroke:Green;stroke-width:2"/>
+				<circle cx="55" cy="55" r="50" fill="#219E3E" stroke="#17301D" stroke-width="2" />
+				<polygon points="10,10 75,150 150,60" style="fill:#63BCF7;stroke:black;stroke-width:3"/>
+				<rect width="20" height="20" stroke="#17301D" stroke-width="2" fill="#0E4E75" fill-opacity="0.5" stroke-opacity="0.5"/>
+				<ellipse cx="120" cy="60" rx="70" ry="40" style="fill:#3F5208;stroke:black;stroke-width:3"/>
+			</svg>
+			<div style="position:absolute;top:180px;left:10px;">look!svg works here!</div>
+		</HtmlCanvas>
+	</BasicCanvas>
+</BasicCanvas>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BasicCanvas>
+	<Label x="10" y="10" text="Button&nbsp;Effect" color="#ffffff" background="#333333" padding="3" font-weight="bold"/>
+	<BasicCanvas x="10" y="40" background="#222222" width="780" height="460">
+		<Button id="be-navbt0-0" effect="alpha" visible="false">
+			<Label x="10" y="10" padding="3px" text="normal" border-radius="3px" background="#ffffff" />
+			<Click>
+				<CanvasEvent id="be-navbt1-0" action="set" visible="true"/>
+				<CanvasEvent id="be-navbt1-1" action="set" visible="false"/>
+				<CanvasEvent id="be-navbt0-0" action="set" visible="false"/>
+				<CanvasEvent id="be-navbt0-1" action="set" visible="true"/>
+				<NavigationEvent controllerId="be-nav" showIdx="0" />
+			</Click>
+		</Button>
+		<Label id="be-navbt0-1" x="10" y="10" padding="3px" text="normal" border-radius="3px" background="#3333ff" color="#ffffff" />
+		<Button id="be-navbt1-0" effect="alpha">
+			<Label x="70" y="10" padding="3px" text="touchMode" border-radius="3px" background="#ffffff" />
+			<Click>
+				<CanvasEvent id="be-navbt1-0" action="set" visible="false"/>
+				<CanvasEvent id="be-navbt1-1" action="set" visible="true"/>
+				<CanvasEvent id="be-navbt0-0" action="set" visible="true"/>
+				<CanvasEvent id="be-navbt0-1" action="set" visible="false"/>
+				<NavigationEvent controllerId="be-nav" showIdx="1" />
+			</Click>
+		</Button>
+		<Label id="be-navbt1-1" x="70" y="10" padding="3px" text="touchMode" border-radius="3px" background="#3333ff" color="#ffffff" visible="false" />
+		<NavigationController x="10" y="40" id="be-nav" width="760" height="410" border="solid 1px #333333">
+			<BasicCanvas>
+				<Button effect="alpha">
+					<Label text="alpha" x="10" y="10" width="100" height="100" background="#ffffff" border="solid 1px" border-radius="10px" line-height="100px" text-align="center" font-size="20px" />
+				</Button>
+			</BasicCanvas>
+			<BasicCanvas>
+				<Button effect="alpha" touchMode="true">
+					<Label text="alpha" x="10" y="10" width="100" height="100" background="#ffffff" border="solid 1px" border-radius="10px" line-height="100px" text-align="center" font-size="20px" />
+				</Button>
+			</BasicCanvas>
+		</NavigationController>
+	</BasicCanvas>
+</BasicCanvas>

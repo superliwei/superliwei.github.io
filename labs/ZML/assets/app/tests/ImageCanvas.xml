@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BasicCanvas>
+	<Label x="10" y="10" text="ImageCanvas" color="#ffffff" background="#333333" padding="3" font-weight="bold"/>
+	<BasicCanvas x="10" y="40" background="#222222" width="780" height="460">
+		<ImageCanvas x="10" y="10" url="images/nav/01.jpg" preload="true" scaleX="0.4" scaleY="0.4" />
+		<ImageCanvas x="10" y="190" source="img_0" width="100" height="100" border="solid 1px" overflow="hidden" img="left:-395px,top:-50px" />
+		<ImageCanvas effect="alpha" x="115" y="190" source="img_0" width="100" height="100" border="solid 1px" overflow="hidden" img="x:-40,y:0,scaleX:0.23,scaleY:0.23,alpha:1" />
+	</BasicCanvas>
+</BasicCanvas>

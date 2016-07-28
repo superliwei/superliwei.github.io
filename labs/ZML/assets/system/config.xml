@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<import>
+		<!-- greensock -->
+		<script src="assets/system/libs/greensock-v12-js/src/minified/jquery.gsap.min.js" />
+		<script src="assets/system/libs/greensock-v12-js/src/minified/TweenLite.min.js" />
+		<script src="assets/system/libs/greensock-v12-js/src/minified/easing/EasePack.min.js" />
+		<script src="assets/system/libs/greensock-v12-js/src/minified/plugins/CSSPlugin.min.js" />
+		<!--<script src="assets/system/libs/greensock-v12-js/src/minified/TweenMax.min.js" />-->
+		<!--<script src="assets/system/libs/greensock-v12-js/src/minified/TimelineLite.min.js" />-->
+		<!--<script src="assets/system/libs/greensock-v12-js/src/minified/TimelineMax.min.js" />-->
+		<!-- bootstrap -->
+		<!--
+		<link rel="stylesheet" href="assets/system/libs/bootstrap-3.0.3-dist/css/bootstrap.min.css" type="text/css" />
+		<script src="assets/system/libs/bootstrap-3.0.3-dist/js/bootstrap.min.js" />
+		-->
+		<!-- plugins -->
+		<script src="assets/system/plugins/Eval.js" />
+		<script src="assets/system/plugins/Alert.js" />
+		<script src="assets/system/plugins/Transform.js" />
+		<script src="assets/system/plugins/Alpha.js" />
+		<script src="assets/system/plugins/Tween.js" />
+		<!-- ECharts -->
+		<script src="assets/system/libs/echarts/echarts.min.js" />
+		<script src="assets/system/libs/echarts/china.js" />
+		<script src="assets/system/plugins/ECharts.js" />
+		<!-- ButtonEffects -->
+		<script src="assets/system/plugins/buttonEffects/Alpha.js" />
+		<!-- transitions -->
+		<script src="assets/system/plugins/transitions/Random.js" />
+		<script src="assets/system/plugins/transitions/Alpha.js" />
+		<script src="assets/system/plugins/transitions/MoveIn.js" />
+		<script src="assets/system/plugins/transitions/Fly.js" />
+		<script src="assets/system/plugins/transitions/Reverse.js" />
+	</import>
+</root>
