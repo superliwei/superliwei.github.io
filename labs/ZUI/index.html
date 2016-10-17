@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>ZUI</title>
+		
+		<!-- zui css -->
+		<link rel="stylesheet" type="text/css" href="src/libs/Font-Awesome-3.2.1/css/font-awesome.min.css">
+	    <link rel="stylesheet" type="text/css" href="src/zui.0.0.1.min.css">
+	    
+		<script type="text/javascript" src="src/libs/jquery-2.1.1.min.js" ></script>
+		<script type="text/javascript" src="src/zui.0.0.1.min.js"></script>
+	    
+	    <style>
+	    	html,body
+	    	{
+	    		margin: 0;
+	    		background-color: #444444;
+	    		width: 100%;
+	    		height: 100%;
+	    		font-family: "微软雅黑";
+	    	}
+	    	
+	    	.mainLayout
+	    	{
+	    		display: flex;
+	    		width: 100%;
+	    		height: 100%;
+	    	}
+	    	
+	    	.mainLayout .leftBox
+	    	{
+	    		min-width: 300px;
+	    		background-color: rgba(0,0,0,0.5);
+	    		padding: 15px;
+	    	}
+	    	
+	    	.mainLayout .leftBox .title
+	    	{
+	    		line-height: 50px;
+	    		font-size: 25px;
+	    		color: #FFFFFF;
+	    	}
+	    	
+	    	.mainLayout .leftBox .info
+	    	{
+	    		line-height: 30px;
+	    		font-size: 14px;
+	    		color: #666666;
+	    		font-family: "微软雅黑";
+	    	}
+	    	
+	    	.mainLayout .rightBox
+	    	{
+	    		flex-grow: 1;
+	    		padding: 15px;
+	    		overflow: auto;
+	    	}
+	    	
+	    	.mainLayout .rightBox .panel
+	    	{
+	    		margin-bottom: 10px;
+	    	}
+	    	
+	    	.mainLayout .rightBox .panel > .title
+	    	{
+	    		font-size: 18px;
+	    		color: #999999;
+	    		background-color:rgba(0,0,0,0.1);
+	    		padding: 5px;
+	    	}
+	    	
+	    	.mainLayout .rightBox .panel > .content
+	    	{
+	    		padding: 5px;
+	    	}
+	    </style>
+	    <script>
+	    	var CN = {
+	    		/*顶部菜单*/
+				menuBar : {
+					file : {
+						root : "文件",
+						open : "打开",
+						save : "保存"
+					},
+					edit : {
+						root : "编辑",
+						undo : "撤消",
+						redo : "重做",
+						del : "删除",
+						flyHome : "飞到默认",
+						flyToTarget : "飞到选择的目标",
+						keys : "键盘快捷键"
+					},
+					view : {
+						root : "视图",
+						leftBar : "左边栏",
+						rightBar : "右边栏",
+						toggleFullScreen : "全屏切换"
+					},
+					help : {
+						root : "帮助",
+						about : "关于",
+						lang : {
+							root : "语言",
+							cn : "中文",
+							en : "英文"
+						}
+					}
+				},
+	    		info : "富应用UI框架",
+	    		cn : "中文",
+	    		en : "英文",
+	    		Button : "按钮",
+	    		Accordion : "折叠面板",
+	    		CheckBox : "选择框",
+	    		ComboBox : "下拉菜单",
+	    		Input : "输入框",
+	    		MenuBar : "菜单栏/菜单",
+	    		PopWin : "弹出窗口",
+	    		Slider : "拖动条",
+	    		titleA : "标题A",
+	    		titleB : "标题B",
+	    		contentA : "初次见面，请多多关照",
+	    		contentB : "好吧，但愿有朝一日我也会时来运转，让我们拭目以待吧。",
+	    		popup : "弹出"
+	    	};
+	    	var EN = {
+	    		/*顶部菜单*/
+				menuBar : {
+					file : {
+						root : "File",
+						open : "Open",
+						save : "Save"
+					},
+					edit : {
+						root : "Edit",
+						undo : "Undo",
+						redo : "Redo",
+						del : "Delete",
+						flyHome : "Fly To Home",
+						flyToTarget : "Fly To Target",
+						keys : "Quick Keys"
+					},
+					view : {
+						root : "View",
+						leftBar : "Left Bar",
+						rightBar : "Right Bar",
+						toggleFullScreen : "Toggle Full Screen"
+					},
+					help : {
+						root : "Help",
+						about : "About",
+						lang : {
+							root : "Language",
+							cn : "Chinese",
+							en : "English"
+						}
+					}
+				},
+	    		info : "Rich Application UI Framework",
+	    		cn : "Chinese",
+	    		en : "English",
+	    		Button : "Button",
+	    		Accordion : "Accordion",
+	    		CheckBox : "CheckBox",
+	    		ComboBox : "ComboBox",
+	    		Input : "Input",
+	    		MenuBar : "MenuBar/Menu",
+	    		Menu : "Menu",
+	    		PopWin : "PopWin",
+	    		Slider : "Slider",
+	    		titleA : "Title A",
+	    		titleB : "Title B",
+	    		contentA : "It's the first meeting. Please convenience me in future.",
+	    		contentB : "Let us see, then, and hope that the sun will for once shine a little on me.",
+	    		popup : "Popup"
+	    	};
+	    	$Lang = CN;
+	    	
+	    	$(function(){
+	    		var langSwitcher = $(".zui.combobox").eq(0).zui_combobox();
+	    		langSwitcher.setValue("cn");
+	    		langSwitcher.view.on(ZUI.ComboBox.CHANGE,function(e){
+	    			var value = langSwitcher.getValue();
+	    			$Lang = value == "cn" ? CN : EN;
+	    			ZUI.Lang.render();
+	    		});
+	    	});
+	    </script>
+	</head>
+	<body>
+		<div class="mainLayout">
+			<div class="leftBox">
+				<div class="title">ZUI</div>
+				<div style="color: #666666;font-size: 11px;">v0.0.1</div>
+				<div class="info" data-lang="{$Lang.info}"></div>
+				<div style="height: 20px;margin-top: 20px;">
+					<div class="zui combobox">
+						<div class="list">
+							<div class="item" data-lang="{$Lang.cn}" data-value="cn"></div>
+							<div class="item" data-lang="{$Lang.en}" data-value="en"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="rightBox">
+				<div class="panel">
+					<div class="title" data-lang="{$Lang.Button}"></div>
+					<div class="content">
+						<div style="float:left;margin: 2px;" class="zui button" data-lang="{$Lang.Button}"></div>
+						<div style="clear: both;"></div>
+					</div>
+				</div>
+				<div class="panel">
+					<div class="title" data-lang="{$Lang.Accordion}"></div>
+					<div class="content">
+						<div class="zui accordion">
+				      		<div class="title active">
+				      			<div class="left"><div class="arrow"></div></div>
+				      			<span data-lang="{$Lang.titleA}"></span>
+				      		</div>
+				      		<div class="content active">
+				      			<div style="padding: 10px;color: #999999;" data-lang="{$Lang.contentA}"></div>
+				      		</div>
+				      		<div class="title">
+				      			<div class="left"><div class="arrow"></div></div>
+				      			<span data-lang="{$Lang.titleB}"></span>
+				      		</div>
+				      		<div class="content">
+				      			<div style="padding: 10px;color: #999999;" data-lang="{$Lang.contentB}"></div>
+				      		</div>
+				      	</div>
+					</div>
+				</div>
+				<div class="panel">
+					<div class="title" data-lang="{$Lang.CheckBox}"></div>
+					<div class="content">
+						<div style="height: 25px;">
+							<div class="zui checkbox"></div>
+						</div>
+					</div>
+				</div>
+				<div class="panel">
+					<div class="title" data-lang="{$Lang.ComboBox}"></div>
+					<div class="content">
+						<div style="margin-top: 25px;height: 20px;width: 200px;">
+							<div class="zui combobox">
+								<div class="list">
+									<div class="item" data-lang="{$Lang.titleA}" data-value="a"></div>
+									<div class="item" data-lang="{$Lang.titleB}" data-value="b"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel">
+					<div class="title" data-lang="{$Lang.Input}"></div>
+					<div class="content">
+						<div style="margin-top: 25px;height: 20px;width: 200px;">
+							<div class="zui input"></div>
+						</div>
+					</div>
+				</div>
+				<div class="panel">
+					<div class="title" data-lang="{$Lang.MenuBar}"></div>
+					<div class="content">
+						<!-- 菜单 -->
+						<div class="zui menubar">
+					      <div class="item" style="padding-top: 2px">
+					        ZUI
+					      </div>
+					      <div class="item">
+					        <span data-lang="{$Lang.menuBar.file.root}"></span>
+					        <div class="zui menu">
+					          <div class="item">
+					          	<div class="icon"><i class="icon-file"></i></div>
+					          	<div class="label" data-lang="{$Lang.menuBar.file.open}"></div>
+					          	<div class="key">Ctrl+O</div>
+					          </div>
+					          <div class="item">
+					          	<div class="icon"><i class="icon-save"></i></div>
+					          	<div class="label" data-lang="{$Lang.menuBar.file.save}"></div>
+					          	<div class="key">Ctrl+S</div>
+					          </div>
+					        </div>
+					      </div>
+					      <div class="item">
+					      	<span data-lang="{$Lang.menuBar.edit.root}"></span>
+					      	<div class="zui menu">
+					          <div class="item disabled">
+					          	<div class="icon"><i class="icon-undo"></i></div>
+					          	<div class="label" data-lang="{$Lang.menuBar.edit.undo}"></div>
+					          	<div class="key">Ctrl+Z</div>
+					          </div>
+					          <div class="item">
+					          	<div class="icon"><i class="icon-repeat"></i></div>
+					          	<div class="label" data-lang="{$Lang.menuBar.edit.redo}"></div>
+					          	<div class="key">Ctrl+Y</div>
+					          </div>
+					          <div class="divider"></div>
+					          <div class="item disabled">
+					          	<div class="icon"><i class="icon-trash"></i></div>
+					          	<div class="label" data-lang="{$Lang.menuBar.edit.del}"></div>
+					          	<div class="key">Delete</div>
+					          </div>
+					          <div class="divider"></div>
+					          <div class="item">
+					          	<div class="icon"><i class="icon-home"></i></div>
+					          	<div class="label" data-lang="{$Lang.menuBar.edit.flyHome}"></div>
+					          	<div class="key">Ctrl+H</div>
+					          </div>
+					          <div class="item">
+					          	<div class="icon"><i class="icon-plane"></i></div>
+					          	<div class="label" data-lang="{$Lang.menuBar.edit.flyToTarget}"></div>
+					          	<div class="key">Ctrl+F</div>
+					          </div>
+					          <div class="divider"></div>
+					          <div class="item">
+					          	<div class="icon"><i class="icon-keyboard"></i></div>
+					          	<div class="label" data-lang="{$Lang.menuBar.edit.keys}"></div>
+					          	<div class="key"></div>
+					          </div>
+					        </div>
+					      </div>
+					      <div class="item">
+					      	<span data-lang="{$Lang.menuBar.view.root}"></span>
+					      	<div class="zui menu">
+					          <div class="item">
+					          	<div class="icon"><i class="icon-circle-arrow-left"></i></div>
+					          	<div class="label" data-lang="{$Lang.menuBar.view.leftBar}"></div>
+					          	<div class="key">Ctrl+Shift+1</div>
+					          </div>
+					          <div class="item">
+					          	<div class="icon"><i class="icon-circle-arrow-right"></i></div>
+					          	<div class="label" data-lang="{$Lang.menuBar.view.rightBar}"></div>
+					          	<div class="key">Ctrl+Shift+2</div>
+					          </div>
+					          <div class="divider"></div>
+					          <div class="item">
+					          	<div class="icon"></div>
+					          	<div class="label" data-lang="{$Lang.menuBar.view.toggleFullScreen}"></div>
+					          	<div class="key">F11</div>
+					          </div>
+					        </div>
+					      </div>
+					      <div class="item">
+					      	<span data-lang="{$Lang.menuBar.help.root}"></span>
+					      	<div class="zui menu">
+					          <div class="item">
+					          	<div class="icon"><i class="icon-info-sign"></i></div>
+					          	<div class="label" data-lang="{$Lang.menuBar.help.about}"></div>
+					          	<div class="key"></div>
+					          </div>
+					          <div class="item">
+					          	<div class="icon"></div>
+					          	<div class="label" data-lang="{$Lang.menuBar.help.lang.root}"></div>
+					          	<div class="key"></div>
+					          	<div class="zui menu">
+					          		<div class="item">
+							          	<div class="icon"></div>
+							          	<div class="label" data-lang="{$Lang.menuBar.help.lang.cn}"></div>
+							          	<div class="key"></div>
+							        </div>
+							        <div class="item">
+							          	<div class="icon"></div>
+							          	<div class="label" data-lang="{$Lang.menuBar.help.lang.en}"></div>
+							          	<div class="key"></div>
+							        </div>
+					          	</div>
+					          </div>
+					        </div>
+					      </div>
+					    </div>
+					</div>
+				</div>
+				<div class="panel">
+					<div class="title" data-lang="{$Lang.Slider}"></div>
+					<div class="content">
+						<div style="margin-top: 25px;height: 20px;width: 200px;">
+							<div class="zui slider"></div>
+						</div>
+					</div>
+				</div>
+				<div class="panel">
+					<div class="title" data-lang="{$Lang.PopWin}"></div>
+					<div class="content">
+						<div id="popupBt" style="float:left;" class="zui button" data-lang="{$Lang.popup}"></div>
+						<div style="clear: both;"></div>
+					</div>
+					<script>
+						(function(){
+							$("#popupBt").click(function(){
+								var popWin = $(".zui.popwin").eq(0).zui_popwin();
+								popWin.show();
+							});
+						})();
+					</script>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 弹出窗口 -->
+	    <div class="zui popwin" style="width: 500px;height: 300px;">
+	    	<div class="titleBar">
+	    		<div class="icon"><i class="icon-cog"></i></div>
+	    		<span data-lang="{$Lang.titleA}"></span>
+	    		<div class="remove"><i class="icon-remove"></i></div>
+	    	</div>
+	    	<div class="content">
+	    		<div style="padding: 10px;color: #999999;" data-lang="{$Lang.contentA}"></div>
+	    	</div>
+	    </div>
+	</body>
+</html>
