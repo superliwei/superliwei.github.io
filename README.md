@@ -2,6 +2,10 @@
 
 ###2016
 
+* ZUI
+
+    http://superliwei.github.io/labs/ZUI/
+
 * CloudOS(进行中...)
 
     http://cloudos.herokuapp.com
