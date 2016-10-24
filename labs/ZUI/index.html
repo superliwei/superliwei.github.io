@@ -128,7 +128,8 @@
 	    		titleB : "标题B",
 	    		contentA : "初次见面，请多多关照",
 	    		contentB : "好吧，但愿有朝一日我也会时来运转，让我们拭目以待吧。",
-	    		popup : "弹出"
+	    		popup : "弹出",
+	    		Pointer : "指针"
 	    	};
 	    	var EN = {
 	    		/*顶部菜单*/
@@ -181,7 +182,8 @@
 	    		titleB : "Title B",
 	    		contentA : "It's the first meeting. Please convenience me in future.",
 	    		contentB : "Let us see, then, and hope that the sun will for once shine a little on me.",
-	    		popup : "Popup"
+	    		popup : "Popup",
+	    		Pointer : "Pointer"
 	    	};
 	    	$Lang = CN;
 	    	
@@ -217,70 +219,6 @@
 					<div class="content">
 						<div style="float:left;margin: 2px;" class="zui button" data-lang="{$Lang.Button}"></div>
 						<div style="clear: both;"></div>
-					</div>
-				</div>
-				<div class="panel">
-					<div class="title" data-lang="{$Lang.Accordion}"></div>
-					<div class="content">
-						<div class="zui accordion">
-				      		<div class="title active">
-				      			<div class="left"><div class="arrow"></div></div>
-				      			<span data-lang="{$Lang.titleA}"></span>
-				      		</div>
-				      		<div class="content active">
-				      			<div style="padding: 10px;color: #999999;" data-lang="{$Lang.contentA}"></div>
-				      		</div>
-				      		<div class="title">
-				      			<div class="left"><div class="arrow"></div></div>
-				      			<span data-lang="{$Lang.titleB}"></span>
-				      		</div>
-				      		<div class="content">
-				      			<div style="padding: 10px;color: #999999;" data-lang="{$Lang.contentB}"></div>
-				      		</div>
-				      	</div>
-					</div>
-				</div>
-				<div class="panel">
-					<div class="title" data-lang="{$Lang.CheckBox}"></div>
-					<div class="content">
-						<div style="height: 25px;">
-							<div class="zui checkbox"></div>
-						</div>
-					</div>
-				</div>
-				<div class="panel">
-					<div class="title" data-lang="{$Lang.ComboBox}"></div>
-					<div class="content">
-						<div style="margin-top: 25px;height: 20px;width: 200px;">
-							<div class="zui combobox">
-								<div class="list">
-									<div class="item" data-lang="{$Lang.titleA}" data-value="a"></div>
-									<div class="item" data-lang="{$Lang.titleB}" data-value="b"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="panel">
-					<div class="title" data-lang="{$Lang.Input}"></div>
-					<div class="content">
-						<div style="margin-top: 25px;height: 20px;width: 200px;">
-							<div class="zui input"></div>
-						</div>
-					</div>
-				</div>
-				<div class="panel">
-					<div class="title" data-lang="{$Lang.TextArea}"></div>
-					<div class="content">
-						<div style="margin-top: 25px;height: 45px;width: 200px;">
-							<div class="zui textarea"></div>
-						</div>
-					</div>
-				</div>
-				<div class="panel">
-					<div class="title" data-lang="{$Lang.ColorPicker}"></div>
-					<div class="content">
-						<div class="zui colorpicker"></div>
 					</div>
 				</div>
 				<div class="panel">
@@ -396,6 +334,70 @@
 					</div>
 				</div>
 				<div class="panel">
+					<div class="title" data-lang="{$Lang.Accordion}"></div>
+					<div class="content">
+						<div class="zui accordion">
+				      		<div class="title active">
+				      			<div class="left"><div class="arrow"></div></div>
+				      			<span data-lang="{$Lang.titleA}"></span>
+				      		</div>
+				      		<div class="content active">
+				      			<div style="padding: 10px;color: #999999;" data-lang="{$Lang.contentA}"></div>
+				      		</div>
+				      		<div class="title">
+				      			<div class="left"><div class="arrow"></div></div>
+				      			<span data-lang="{$Lang.titleB}"></span>
+				      		</div>
+				      		<div class="content">
+				      			<div style="padding: 10px;color: #999999;" data-lang="{$Lang.contentB}"></div>
+				      		</div>
+				      	</div>
+					</div>
+				</div>
+				<div class="panel">
+					<div class="title" data-lang="{$Lang.CheckBox}"></div>
+					<div class="content">
+						<div style="height: 25px;">
+							<div class="zui checkbox"></div>
+						</div>
+					</div>
+				</div>
+				<div class="panel">
+					<div class="title" data-lang="{$Lang.ComboBox}"></div>
+					<div class="content">
+						<div style="margin-top: 25px;height: 20px;width: 200px;">
+							<div class="zui combobox">
+								<div class="list">
+									<div class="item" data-lang="{$Lang.titleA}" data-value="a"></div>
+									<div class="item" data-lang="{$Lang.titleB}" data-value="b"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel">
+					<div class="title" data-lang="{$Lang.Input}"></div>
+					<div class="content">
+						<div style="margin-top: 25px;height: 20px;width: 200px;">
+							<div class="zui input"></div>
+						</div>
+					</div>
+				</div>
+				<div class="panel">
+					<div class="title" data-lang="{$Lang.TextArea}"></div>
+					<div class="content">
+						<div style="margin-top: 25px;height: 45px;width: 200px;">
+							<div class="zui textarea"></div>
+						</div>
+					</div>
+				</div>
+				<div class="panel">
+					<div class="title" data-lang="{$Lang.ColorPicker}"></div>
+					<div class="content">
+						<div class="zui colorpicker"></div>
+					</div>
+				</div>
+				<div class="panel">
 					<div class="title" data-lang="{$Lang.Slider}"></div>
 					<div class="content">
 						<div style="margin-top: 25px;height: 20px;width: 200px;">
@@ -417,6 +419,14 @@
 							});
 						})();
 					</script>
+				</div>
+				<div class="panel">
+					<div class="title" data-lang="{$Lang.Pointer}"></div>
+					<div class="content">
+						<div style="position: relative;padding-top: 10px;">
+							<div class="zui pointer"></div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
