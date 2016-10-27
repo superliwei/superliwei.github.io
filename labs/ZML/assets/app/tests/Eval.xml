@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<BasicCanvas>
-	<Label x="10" y="10" text="eval" color="#ffffff" background="#333333" padding="3" font-weight="bold"/>
-	<BasicCanvas x="10" y="40" background="#222222" width="780" height="460">
-		<Button effect="alpha" touchMode="true">
-			<Label x="10" y="10" padding="3px" text="Math.random" border-radius="3px" background="#ffffff" />
+<BasicCanvas position="static" class="navContent">
+	<label text="eval" position="static" class="header"></label>
+	<HtmlCanvas id="evalInfo" color="#ffffff" position="static" background="rgba(0,0,0,0.5)" padding="5px" margin="15px" max-height="200px" overflow="auto"/>
+	<BasicCanvas position="static" class="btContainer">
+		<Button effect="alpha" position="static" class="btn">
+			<Label position="static" text="Math.random" />
 			<Click>
 				<eval>
 					var info = ZML.find("#evalInfo");
@@ -11,8 +12,9 @@
 				</eval>
 			</Click>
 		</Button>
-		<Button effect="alpha" touchMode="true">
-			<Label x="10" y="40" padding="3px" text="ZML.find(&quot;#canvasId&quot;)" border-radius="3px" background="#ffffff" />
+		<BasicCanvas position="static" clear="both"></BasicCanvas>
+		<Button effect="alpha" position="static" class="btn">
+			<Label position="static" text="ZML.find(&quot;#canvasId&quot;)" />
 			<Click>
 				<eval>
 					var info = ZML.find("#evalInfo");
@@ -22,8 +24,9 @@
 				</eval>
 			</Click>
 		</Button>
-		<Button effect="alpha" touchMode="true">
-			<Label x="10" y="70" padding="3px" text="ZML.find(&quot;Label&quot;)" border-radius="3px" background="#ffffff" />
+		<BasicCanvas position="static" clear="both"></BasicCanvas>
+		<Button effect="alpha" position="static" class="btn">
+			<Label position="static" text="ZML.find(&quot;Label&quot;)" />
 			<Click>
 				<eval>
 					var info = ZML.find("#evalInfo");
@@ -36,8 +39,9 @@
 				</eval>
 			</Click>
 		</Button>
-		<Button effect="alpha" touchMode="true">
-			<Label x="10" y="100" padding="3px" text="ZML.find(&quot;Label,background:#333333&quot;)" border-radius="3px" background="#ffffff" />
+		<BasicCanvas position="static" clear="both"></BasicCanvas>
+		<Button effect="alpha" position="static" class="btn">
+			<Label position="static" text="ZML.find(&quot;Label,class:header&quot;)" />
 			<Click>
 				<eval>
 					var info = ZML.find("#evalInfo");
@@ -50,12 +54,13 @@
 				</eval>
 			</Click>
 		</Button>
-		<Button effect="alpha" touchMode="true">
-			<Label x="10" y="130" padding="3px" text="ZML.find(&quot;Label,background:#333333,text:eval&quot;)" border-radius="3px" background="#ffffff" />
+		<BasicCanvas position="static" clear="both"></BasicCanvas>
+		<Button effect="alpha" position="static" class="btn">
+			<Label position="static" text="ZML.find(&quot;Label,class:header,text:eval&quot;)" />
 			<Click>
 				<eval>
 					var info = ZML.find("#evalInfo");
-					var arr = ZML.find("Label,background:#333333,text:eval");
+					var arr = ZML.find("Label,class:header,text:eval");
 					var str="";
 					$.each(arr,function(i){
 						str+=arr[i].data.prop("outerHTML");
@@ -64,8 +69,9 @@
 				</eval>
 			</Click>
 		</Button>
-		<Button effect="alpha" touchMode="true">
-			<Label x="10" y="160" padding="3px" text="ZML.find(&quot;Label,text:Math.random&quot;)" border-radius="3px" background="#ffffff" />
+		<BasicCanvas position="static" clear="both"></BasicCanvas>
+		<Button effect="alpha" position="static" class="btn">
+			<Label position="static" text="ZML.find(&quot;Label,text:Math.random&quot;)" />
 			<Click>
 				<eval>
 					var info = ZML.find("#evalInfo");
@@ -78,8 +84,5 @@
 				</eval>
 			</Click>
 		</Button>
-		<BasicCanvas x="10" y="250" width="760" height="200" border="solid 1px #666666" overflow="auto">
-			<HtmlCanvas id="evalInfo" color="#ffffff" padding="5px"/>
-		</BasicCanvas>
 	</BasicCanvas>
 </BasicCanvas>

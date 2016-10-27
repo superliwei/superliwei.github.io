@@ -1,86 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<BasicCanvas>
-	<Label x="10" y="10" text="BasicCanvas" color="#ffffff" background="#333333" padding="3" font-weight="bold"/>
-	<BasicCanvas x="10" y="40" background="#222222" width="780" height="460">
+<BasicCanvas position="static" class="navContent">
+	<label text="BasicCanvas" position="static" class="header"></label>
+	<BasicCanvas position="relative" height="200" margin="15px" background="#222222">
 		<BasicCanvas id="mybox" x="10" y="10" width="100" height="100" border="solid 1px #ffffff" background="#000000" />
-
-		<Button effect="alpha" touchMode="true">
-			<Label x="10" y="200" padding="3px" text="x:20" border-radius="3px" background="#ffffff" />
+	</BasicCanvas>
+	<BasicCanvas position="static" class="btContainer">
+		<Button effect="alpha" position="static" class="btn">
+			<Label position="static" text="x:20" />
 			<Click>
 				<CanvasEvent id="mybox" action="set" x="20" />
 			</Click>
 		</Button>
-		<Button effect="alpha" touchMode="true">
-			<Label x="55" y="200" padding="3px" text="y:20" border-radius="3px" background="#ffffff" />
+		<Button effect="alpha" position="static" class="btn">
+			<Label position="static" text="y:20" />
 			<Click>
 				<CanvasEvent id="mybox" action="set" y="20" />
 			</Click>
 		</Button>
-		<Button effect="alpha" touchMode="true">
-			<Label x="100" y="200" padding="3px" text="width:50" border-radius="3px" background="#ffffff" />
+		<Button effect="alpha" position="static" class="btn">
+			<Label position="static" text="width:50" />
 			<Click>
 				<CanvasEvent id="mybox" action="set" width="50" />
 			</Click>
 		</Button>
-		<Button effect="alpha" touchMode="true">
-			<Label x="176" y="200" padding="3px" text="height:50" border-radius="3px" background="#ffffff" />
+		<Button effect="alpha" position="static" class="btn">
+			<Label position="static" text="height:50" />
 			<Click>
 				<CanvasEvent id="mybox" action="set" height="50" />
 			</Click>
 		</Button>
-		<Button effect="alpha" touchMode="true">
-			<Label x="260" y="200" padding="3px" text="scaleX:0.5" border-radius="3px" background="#ffffff" />
+		<Button effect="alpha" position="static" class="btn">
+			<Label position="static" text="scaleX:0.5" />
 			<Click>
 				<CanvasEvent id="mybox" action="set" scaleX="0.5" />
 			</Click>
 		</Button>
-		<Button effect="alpha" touchMode="true">
-			<Label x="350" y="200" padding="3px" text="scaleY:0.5" border-radius="3px" background="#ffffff" />
+		<Button effect="alpha" position="static" class="btn">
+			<Label position="static" text="scaleY:0.5" />
 			<Click>
 				<CanvasEvent id="mybox" action="set" scaleY="0.5" />
 			</Click>
 		</Button>
-		<Button effect="alpha" touchMode="true">
-			<Label x="440" y="200" padding="3px" text="rotate:45" border-radius="3px" background="#ffffff" />
+		<Button effect="alpha" position="static" class="btn">
+			<Label position="static" text="rotate:45" />
 			<Click>
 				<CanvasEvent id="mybox" action="set" rotate="45" />
 			</Click>
 		</Button>
-		<Button effect="alpha" touchMode="true">
-			<Label x="523" y="200" padding="3px" text="alpha:0.5" border-radius="3px" background="#ffffff" />
+		<Button effect="alpha" position="static" class="btn">
+			<Label position="static" text="alpha:0.5" />
 			<Click>
 				<CanvasEvent id="mybox" action="set" alpha="0.5" />
 			</Click>
 		</Button>
-		<Button effect="alpha" touchMode="true">
-			<Label x="606" y="200" padding="3px" text="visible:false" border-radius="3px" background="#ffffff" />
+		<Button effect="alpha" position="static" class="btn">
+			<Label position="static" text="visible:false" />
 			<Click>
 				<CanvasEvent id="mybox" action="set" visible="false" />
 			</Click>
 		</Button>
-		<Button effect="alpha" touchMode="true">
-			<Label width="200" x="10" y="230" padding="3px" text="border:solid 5px #ff0000" border-radius="3px" background="#ffffff" />
+		<Button effect="alpha" position="static" class="btn">
+			<Label position="static" text="border:solid 5px #ff0000" />
 			<Click>
 				<CanvasEvent id="mybox" action="set" border="solid 5px #ff0000" />
 			</Click>
 		</Button>
-		<Button effect="alpha" touchMode="true">
-			<Label x="220" y="230" padding="3px" text="background:#ffff00" border-radius="3px" background="#ffffff" />
+		<Button effect="alpha" position="static" class="btn">
+			<Label position="static" text="background:#ffff00" />
 			<Click>
 				<CanvasEvent id="mybox" action="set" background="#ffff00" />
 			</Click>
 		</Button>
-		<Button effect="alpha" touchMode="true">
-			<Label width="150" x="375" y="230" padding="3px" text="border-radius:10px" border-radius="3px" background="#ffffff" />
+		<Button effect="alpha" position="static" class="btn">
+			<Label position="static" text="border-radius:10px" />
 			<Click>
 				<CanvasEvent id="mybox" action="set" border-radius="10px" />
 			</Click>
 		</Button>
-		<Button effect="alpha" touchMode="true">
-			<Label x="10" y="260" padding="3px" text="reset" border-radius="3px" background="#3333ff" color="#ffffff" />
+		<BasicCanvas position="static" clear="both"></BasicCanvas>
+		<Button effect="alpha" position="static" class="btn" background="#3333ff">
+			<Label position="static" text="reset" color="#ffffff" />
 			<Click>
 				<CanvasEvent id="mybox" action="set" x="10" y="10" width="100" height="100" border="solid 1px #ffffff" background="#000000" border-radius="0px" alpha="1" scaleX="1" scaleY="1" rotate="0" visible="true" />
 			</Click>
 		</Button>
+		<BasicCanvas position="static" clear="both"></BasicCanvas>
 	</BasicCanvas>
 </BasicCanvas>

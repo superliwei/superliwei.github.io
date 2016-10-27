@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<BasicCanvas>
-	<Label x="10" y="10" text="BasicMovieClip" color="#ffffff" background="#333333" padding="3" font-weight="bold"/>
-	<BasicCanvas x="10" y="40" background="#222222" width="780" height="460">
-		<BasicMovieClip id="bmc" x="10" y="10" width="320" height="180" border="solid 1px #333333">
+<BasicCanvas position="static" class="navContent">
+	<label text="BasicMovieClip" position="static" class="header"></label>
+	<BasicCanvas position="relative" height="180" margin="15px">
+		<BasicMovieClip id="bmc" width="320" height="180" border="solid 1px #333333">
 			<ImageCanvas url="images/display360/sample7/fangzi_0001.png" preload="true" />
 			<ImageCanvas url="images/display360/sample7/fangzi_0002.png" preload="true" />
 			<ImageCanvas url="images/display360/sample7/fangzi_0003.png" preload="true" />
@@ -364,26 +364,28 @@
 			<ImageCanvas url="images/display360/sample7/fangzi_0359.png" preload="true" />
 			<ImageCanvas url="images/display360/sample7/fangzi_0360.png" preload="true" />
 		</BasicMovieClip>
-		<Button effect="alpha" touchMode="true">
-			<Label x="10" y="200" padding="3px" text="play" border-radius="3px" background="#ffffff" />
+	</BasicCanvas>
+	<BasicCanvas position="static" class="btContainer">
+		<Button effect="alpha" position="static" class="btn">
+			<Label position="static" text="play" />
 			<Click>
 				<MovieClipEvent id="bmc" action="play" />
 			</Click>
 		</Button>
-		<Button effect="alpha" touchMode="true">
-			<Label x="55" y="200" padding="3px" text="stop" border-radius="3px" background="#ffffff" />
+		<Button effect="alpha" touchMode="true" position="static" class="btn">
+			<Label position="static" text="stop" />
 			<Click>
 				<MovieClipEvent id="bmc" action="stop" />
 			</Click>
 		</Button>
-		<Button effect="alpha" touchMode="true">
-			<Label x="100" y="200" padding="3px" text="gotoAndStop:10" border-radius="3px" background="#ffffff" />
+		<Button effect="alpha" touchMode="true" position="static" class="btn">
+			<Label position="static" text="gotoAndStop:10" />
 			<Click>
 				<MovieClipEvent id="bmc" action="gotoAndStop" frame="10" />
 			</Click>
 		</Button>
-		<Button effect="alpha" touchMode="true">
-			<Label x="224" y="200" padding="3px" text="gotoAndPlay:10" border-radius="3px" background="#ffffff" />
+		<Button effect="alpha" touchMode="true" position="static" class="btn">
+			<Label position="static" text="gotoAndPlay:10" />
 			<Click>
 				<MovieClipEvent id="bmc" action="gotoAndPlay" frame="10" />
 			</Click>

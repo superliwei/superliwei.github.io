@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<BasicCanvas>
-	<Label x="10" y="10" text="VideoCanvas" color="#ffffff" background="#333333" padding="3" font-weight="bold"/>
-	<BasicCanvas x="10" y="40" background="#222222" width="780" height="460">
-		<VideoCanvas id="myvideo" x="10" y="10" width="360" height="203" background="#000000" src="media/kuga.mp4" preload="true" loop="true">
+<BasicCanvas position="static" class="navContent">
+	<label text="VideoCanvas" position="static" class="header"></label>
+	<BasicCanvas position="relative" margin="15px" height="203">
+		<VideoCanvas id="myvideo" width="360" height="203" background="#000000" src="media/kuga.mp4" preload="true" loop="true">
 			<onUpdate>
 				<eval>
 					function formatTime(_t)
@@ -30,83 +30,85 @@
 				<CanvasEvent id="videoInfo" action="set" text="complete" />
 			</onComplete>
 		</VideoCanvas>
-		<Label x="20" y="15" id="videoInfo" color="#999999" />
-		<Button effect="alpha" touchMode="true">
-			<Label x="10" y="220" padding="3px" text="play" border-radius="3px" background="#ffffff" />
+		<Label x="10" y="5" id="videoInfo" color="#999999" />
+	</BasicCanvas>
+	<BasicCanvas position="static" class="btContainer">
+		<Button effect="alpha" position="static" class="btn">
+			<Label position="static" text="play" />
 			<Click>
 				<VideoEvent id="myvideo" action="play" />
 			</Click>
 		</Button>
-		<Button effect="alpha" touchMode="true">
-			<Label x="52" y="220" padding="3px" text="currentTime:5" border-radius="3px" background="#ffffff" />
-			<Click>
-				<VideoEvent id="myvideo" action="set" currentTime="5" />
-			</Click>
-		</Button>
-		<Button effect="alpha" touchMode="true">
-			<Label x="166" y="220" padding="3px" text="volume:0.5" border-radius="3px" background="#ffffff" />
-			<Click>
-				<VideoEvent id="myvideo" action="set" volume="0.5" />
-			</Click>
-		</Button>
-		<Button effect="alpha" touchMode="true">
-			<Label x="256" y="220" padding="3px" text="muted:true" border-radius="3px" background="#ffffff" />
-			<Click>
-				<VideoEvent id="myvideo" action="set" muted="true" />
-			</Click>
-		</Button>
-		<Button effect="alpha" touchMode="true">
-			<Label x="10" y="249" padding="3px" text="pause" border-radius="3px" background="#ffffff" />
+		<Button effect="alpha" position="static" class="btn">
+			<Label position="static" text="pause" />
 			<Click>
 				<VideoEvent id="myvideo" action="pause" />
 			</Click>
 		</Button>
-		<Button effect="alpha" touchMode="true">
-			<Label x="60" y="249" padding="3px" text="fullScreen" border-radius="3px" background="#ffffff" />
+		<Button effect="alpha" position="static" class="btn">
+			<Label position="static" text="stop" />
 			<Click>
-				<VideoEvent id="myvideo" action="fullScreen" />
+				<VideoEvent id="myvideo" action="stop" />
 			</Click>
 		</Button>
-		<Button effect="alpha" touchMode="true">
-			<Label x="150" y="249" padding="3px" text="exitFullScreen" border-radius="3px" background="#ffffff" />
+		<Button effect="alpha" position="static" class="btn">
+			<Label position="static" text="currentTime:5" />
 			<Click>
-				<VideoEvent id="myvideo" action="exitFullScreen" />
+				<VideoEvent id="myvideo" action="set" currentTime="5" />
 			</Click>
 		</Button>
-		<Button effect="alpha" touchMode="true">
-			<Label x="10" y="279" padding="3px" text="media/1.mp3" border-radius="3px" background="#ffffff" />
+		<Button effect="alpha" position="static" class="btn">
+			<Label position="static" text="volume:0.5" />
 			<Click>
-				<CanvasEvent id="myvideo" action="set" src="media/1.mp3" />
+				<VideoEvent id="myvideo" action="set" volume="0.5" />
 			</Click>
 		</Button>
-		<Button effect="alpha" touchMode="true">
-			<Label x="108" y="279" padding="3px" text="media/kuga.mp4" border-radius="3px" background="#ffffff" />
+		<Button effect="alpha" position="static" class="btn">
+			<Label position="static" text="muted:true" />
 			<Click>
-				<CanvasEvent id="myvideo" action="set" src="media/kuga.mp4" />
+				<VideoEvent id="myvideo" action="set" muted="true" />
 			</Click>
 		</Button>
-		<Button effect="alpha" touchMode="true">
-			<Label x="10" y="308" padding="3px" text="loop:false" border-radius="3px" background="#ffffff" />
+		<Button effect="alpha" position="static" class="btn">
+			<Label position="static" text="loop:false" />
 			<Click>
 				<CanvasEvent id="myvideo" action="set" loop="false" />
 			</Click>
 		</Button>
-		<Button effect="alpha" touchMode="true">
-			<Label x="100" y="308" padding="3px" text="controls:true" border-radius="3px" background="#ffffff" />
+		<Button effect="alpha" position="static" class="btn">
+			<Label position="static" text="controls:true" />
 			<Click>
 				<CanvasEvent id="myvideo" action="set" controls="true" />
 			</Click>
 		</Button>
-		<Button effect="alpha" touchMode="true">
-			<Label x="215" y="308" padding="3px" text="preload:false" border-radius="3px" background="#ffffff" />
+		<Button effect="alpha" position="static" class="btn">
+			<Label position="static" text="preload:false" />
 			<Click>
 				<CanvasEvent id="myvideo" action="set" preload="false" />
 			</Click>
 		</Button>
-		<Button effect="alpha" touchMode="true">
-			<Label x="10" y="336" padding="3px" text="stop" border-radius="3px" background="#ffffff" />
+		<Button effect="alpha" position="static" class="btn">
+			<Label position="static" text="media/1.mp3" />
 			<Click>
-				<VideoEvent id="myvideo" action="stop" />
+				<CanvasEvent id="myvideo" action="set" src="media/1.mp3" />
+			</Click>
+		</Button>
+		<Button effect="alpha" position="static" class="btn">
+			<Label position="static" text="media/kuga.mp4" />
+			<Click>
+				<CanvasEvent id="myvideo" action="set" src="media/kuga.mp4" />
+			</Click>
+		</Button>
+		<Button effect="alpha" position="static" class="btn">
+			<Label position="static" text="fullScreen" />
+			<Click>
+				<VideoEvent id="myvideo" action="fullScreen" />
+			</Click>
+		</Button>
+		<Button effect="alpha" position="static" class="btn">
+			<Label position="static" text="exitFullScreen" />
+			<Click>
+				<VideoEvent id="myvideo" action="exitFullScreen" />
 			</Click>
 		</Button>
 	</BasicCanvas>

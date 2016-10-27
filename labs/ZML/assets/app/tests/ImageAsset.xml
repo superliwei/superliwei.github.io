@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<BasicCanvas>
-	<Label x="10" y="10" text="ImageAsset" color="#ffffff" background="#333333" padding="3" font-weight="bold"/>
+<BasicCanvas position="static" class="navContent">
+	<label text="ImageAsset" position="static" class="header"></label>
+	<!-- 标签可以放在任何位置 -->
 	<ImageAsset id="img_0" url="images/nav/01.jpg" />
 	<ImageAsset id="img_1" url="images/nav/02.jpg" />
 	<ImageAsset id="img_2" url="images/nav/03.jpg" />
@@ -19,10 +20,11 @@
 	<ImageAsset id="img_15" url="images/nav/16.jpg" />
 	<ImageAsset id="img_16" url="images/nav/17.jpg" />
 	<ImageAsset id="img_bt" url="images/imageButton.png" />
-	<BasicCanvas x="10" y="40" background="#222222" width="780" height="460">
-		<ImageCanvas x="10" y="10" source="img_1" scaleX="0.5" scaleY="0.5" />
-		<ImageCanvas x="405" y="10" source="img_1" scaleX="0.3" scaleY="0.3" />
-		<ImageButton x="10" y="250" source="img_bt" effect="alpha" />
-		<ImageButton x="180" y="250" source="img_bt" effect="alpha" scaleX="0.6" scaleY="0.6" />
+	<!-- end -->
+	<BasicCanvas position="static" margin="15px">
+		<ImageCanvas source="img_1" scaleX="0.5" scaleY="0.5" />
+		<ImageCanvas x="405" source="img_1" scaleX="0.3" scaleY="0.3" />
+		<ImageButton y="300" source="img_bt" effect="alpha" />
+		<ImageButton x="180" y="300" source="img_bt" effect="alpha" scaleX="0.6" scaleY="0.6" />
 	</BasicCanvas>
 </BasicCanvas>

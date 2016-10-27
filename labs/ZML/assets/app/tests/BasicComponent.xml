@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<BasicCanvas>
-	<Label x="10" y="10" text="BasicComponent" color="#ffffff" background="#333333" padding="3" font-weight="bold"/>
-	<BasicCanvas x="10" y="40" background="#222222" width="780" height="460">
-		<Label x="10" y="10" text="&amp;lt;BasicComponent url=&quot;xxx.xml&quot; /&amp;gt;" color="#e3e3e3" />
+<BasicCanvas position="static" class="navContent">
+	<label text="BasicComponent" position="static" class="header"></label>
+	<BasicCanvas position="static" margin="15px" padding="5px" background="rgba(0,0,0,0.5)">
+		<Label position="static" text="&amp;lt;BasicComponent url=&quot;xxx.xml&quot; /&amp;gt;" color="#e3e3e3" />
 	</BasicCanvas>
 </BasicCanvas>

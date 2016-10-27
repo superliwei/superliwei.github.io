@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<BasicCanvas>
-	<Label x="10" y="10" text="ECharts" color="#ffffff" background="#333333" padding="3" font-weight="bold"/>
-	<BasicCanvas x="10" y="40" background="#222222" width="780" height="460">
-		<ECharts x="10" y="10" width="300" height="250" background="#ffffff">
+<BasicCanvas position="static" class="navContent">
+	<label text="ECharts" position="static" class="header"></label>
+	<BasicCanvas position="static" margin="15px" padding="5px" padding-bottom="0px" background="rgba(0,0,0,0.5)">
+		<ECharts position="static" width="300" height="250" background="#ffffff" float="left" margin-right="5px" margin-bottom="5px">
 			<Option>
 				(function(){
 					var option = {
@@ -17,7 +17,7 @@
 				})();
 			</Option>
 		</ECharts>
-		<ECharts x="400" y="10" width="300" height="250" background="#ffffff">
+		<ECharts position="static" width="300" height="250" background="#ffffff" float="left" margin-right="5px" margin-bottom="5px">
 			<Option>
 				(function(){
 					var data = [];
@@ -63,5 +63,6 @@
 				})();
 			</Option>
 		</ECharts>
+		<BasicCanvas position="static" clear="both"></BasicCanvas>
 	</BasicCanvas>
 </BasicCanvas>

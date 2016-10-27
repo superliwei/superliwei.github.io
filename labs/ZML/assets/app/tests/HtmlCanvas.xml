@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<BasicCanvas>
-	<Label x="10" y="10" text="HtmlCanvas" color="#ffffff" background="#333333" padding="3" font-weight="bold"/>
-	<BasicCanvas x="10" y="40" background="#222222" width="780" height="460">
-		<HtmlCanvas x="10" y="10">
+<BasicCanvas position="static" class="navContent">
+	<label text="HtmlCanvas" position="static" class="header"></label>
+	<BasicCanvas position="relative" margin="15px" background="#222222">
+		<HtmlCanvas position="static" padding="10px">
 			<style>
 				.test
 				{
@@ -64,34 +64,40 @@
 			<div class="test">hello css!</div>
 			<div class="bt">click me !</div>
 			<div class="bt">send event to framework!</div>
+			<div style="clear:both"></div>
 		</HtmlCanvas>
-
-		<Button effect="alpha" touchMode="true">
-			<Label x="10" y="100" padding="3px" text="send&nbsp;to&nbsp;HtmlCanvas!" border-radius="3px" background="#3333ff" color="#ffffff" />
+	</BasicCanvas>
+	<BasicCanvas position="static" class="btContainer">
+		<Button effect="alpha" position="static" class="btn">
+			<Label position="static" text="send&nbsp;to&nbsp;HtmlCanvas!" />
 			<Click>
 				<CanvasEvent param="htmlCanvas" />
 			</Click>
 		</Button>
-		<BasicCanvas x="10" y="135" width="400" height="50" border="solid 1px #333333">
-			<HtmlCanvas id="htmlCanvas0" margin="5px" color="#ffffff" font-size="11px">
-				random it!
-			</HtmlCanvas>
-		</BasicCanvas>
-		<Button effect="alpha" touchMode="true">
-			<Label x="10" y="195" padding="3px" text="set&nbsp;random&nbsp;content!" border-radius="3px" background="#ff3333" color="#ffffff" />
+		<BasicCanvas position="static" clear="both"></BasicCanvas>
+	</BasicCanvas>
+	<BasicCanvas position="static" margin="15px" border="solid 1px #333333">
+		<HtmlCanvas id="htmlCanvas0" position="static" padding="5px" color="#ffffff" font-size="11px">
+			random it!
+		</HtmlCanvas>
+	</BasicCanvas>
+	<BasicCanvas position="static" class="btContainer">
+		<Button effect="alpha" position="static" class="btn">
+			<Label position="static" text="set&nbsp;random&nbsp;content!" />
 			<Click>
 				<CanvasEvent canvas="htmlCanvas0" action="setRandomContent" />
 			</Click>
 		</Button>
-		<HtmlCanvas x="10" y="225">
-			<svg height="200px" width="200px" style="border-style:solid;border-width:2px;background:#ffffff">
-				<line x1="0" y1="0" x2="200" y2="200" style="stroke:Green;stroke-width:2"/>
-				<circle cx="55" cy="55" r="50" fill="#219E3E" stroke="#17301D" stroke-width="2" />
-				<polygon points="10,10 75,150 150,60" style="fill:#63BCF7;stroke:black;stroke-width:3"/>
-				<rect width="20" height="20" stroke="#17301D" stroke-width="2" fill="#0E4E75" fill-opacity="0.5" stroke-opacity="0.5"/>
-				<ellipse cx="120" cy="60" rx="70" ry="40" style="fill:#3F5208;stroke:black;stroke-width:3"/>
-			</svg>
-			<div style="position:absolute;top:180px;left:10px;">look!svg works here!</div>
-		</HtmlCanvas>
+		<BasicCanvas position="static" clear="both"></BasicCanvas>
 	</BasicCanvas>
+	<HtmlCanvas position="relative" margin="15px">
+		<svg height="200px" width="200px" style="border-style:solid;border-width:2px;background:#ffffff">
+			<line x1="0" y1="0" x2="200" y2="200" style="stroke:Green;stroke-width:2"/>
+			<circle cx="55" cy="55" r="50" fill="#219E3E" stroke="#17301D" stroke-width="2" />
+			<polygon points="10,10 75,150 150,60" style="fill:#63BCF7;stroke:black;stroke-width:3"/>
+			<rect width="20" height="20" stroke="#17301D" stroke-width="2" fill="#0E4E75" fill-opacity="0.5" stroke-opacity="0.5"/>
+			<ellipse cx="120" cy="60" rx="70" ry="40" style="fill:#3F5208;stroke:black;stroke-width:3"/>
+		</svg>
+		<div style="position:absolute;top:180px;left:10px;">look!svg works here!</div>
+	</HtmlCanvas>
 </BasicCanvas>

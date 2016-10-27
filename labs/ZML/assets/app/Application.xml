@@ -1,59 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Application>
-	<NavigationController id="mainNav" width="800" height="540" manager="BasicNavigationManager">
-		<BasicComponent url="tests/ECharts.xml" />
-		<BasicComponent url="tests/ImageCanvas.xml" />
-		<BasicComponent url="tests/BasicCanvas.xml" />
-		<BasicComponent url="tests/Transitions.xml" />
-		<BasicComponent url="tests/Eval.xml" />
-		<BasicComponent url="tests/VideoCanvas.xml" />
-		<BasicComponent url="tests/HtmlCanvas.xml" />
-		<BasicComponent url="tests/ButtonEffect.xml" />
-		<BasicComponent url="tests/Tween.xml" />
-		<BasicComponent url="tests/NavigationController.xml" />
-		<BasicComponent url="tests/ImageAsset.xml" />
-		<BasicComponent url="tests/ImageButton.xml" />
-		<BasicComponent url="tests/BasicComponent.xml" />
-		<BasicComponent url="tests/Label.xml" />
-		<BasicComponent url="tests/Button.xml" />
-		<BasicComponent url="tests/BasicMovieClip.xml" />
-	</NavigationController>
-
-	<Events id="updatePageInfo">
-		<eval>
-			var mainNav = ZML.find("#mainNav");
-			var current = mainNav.defaultIdx+1;
-			var total = mainNav.managerInstance.children.length;
-			var str=current+"/"+total;
-			var navInfo = ZML.find("#navInfo");
-			navInfo.view.text(str);
-		</eval>
-	</Events>
-
-	<Button effect="alpha" touchMode="true">
-		<Label x="715" y="508" padding="3px" text="pre" border-radius="3px" background="#ffffff" />
-		<Click>
-			<NavigationEvent controllerId="mainNav" showIdx="pre" />
-			<Events src="updatePageInfo"/>
-		</Click>
-	</Button>
-	<Button effect="alpha" touchMode="true">
-		<Label x="753" y="508" padding="3px" text="next" border-radius="3px" background="#ffffff" />
-		<Click>
-			<NavigationEvent controllerId="mainNav" showIdx="next" />
-			<Events src="updatePageInfo"/>
-		</Click>
-	</Button>
-	<Label id="navInfo" color="#ffffff" y="512" x="605" width="100" text-align="right">
-		<Ready>
-			<Events src="updatePageInfo"/>
-		</Ready>
-	</Label>
-	<BasicCanvas x="10" y="508" width="500">
-		<ImageCanvas position="static" float="left" url="images/browser/chrome.png" img="width:25,height:25" width="25" height="25" margin-right="5px" alpha="1" />
-		<ImageCanvas position="static" float="left" url="images/browser/safari.png" img="width:25,height:25" width="25" height="25" margin-right="5px" alpha="0.2" />
-		<ImageCanvas position="static" float="left" url="images/browser/firefox.png" img="width:25,height:25" width="25" height="25" margin-right="5px" alpha="0.2" />
-		<ImageCanvas position="static" float="left" url="images/browser/ie.png" img="width:25,height:25" width="25" height="25" margin-right="5px" alpha="0.2" />
-		<ImageCanvas position="static" float="left" url="images/browser/opera.png" img="width:25,height:25" width="25" height="25" margin-right="5px" alpha="0.2" />
+<Application width="100%" height="100%">
+	<!-- css -->
+	<BasicComponent url="tests/main.css.xml" />
+	<BasicComponent url="tests/navContent.css.xml" />
+	
+	<BasicCanvas class="mainLayout">
+		<BasicCanvas class="leftBox" position="static">
+			<HtmlCanvas class="header" position="static">
+				<div class="title">ZML</div>
+				<div style="color: #666666;font-size: 11px;">v0.0.1</div>
+				<div class="info">超标记语言</div>
+			</HtmlCanvas>
+			<BasicCanvas class="content" position="static">
+				<Label text="BasicCanvas" position="static" class="item"></Label>
+				<Label text="ImageCanvas" position="static" class="item"></Label>
+				<Label text="ImageButton" position="static" class="item"></Label>
+				<Label text="Label" position="static" class="item"></Label>
+				<Label text="Button" position="static" class="item"></Label>
+				<Label text="BasicMovieClip" position="static" class="item"></Label>
+				<Label text="VideoCanvas" position="static" class="item"></Label>
+				<Label text="HtmlCanvas" position="static" class="item"></Label>
+				<Label text="Tween" position="static" class="item"></Label>
+				<Label text="Eval" position="static" class="item"></Label>
+				<Label text="Transitions" position="static" class="item"></Label>
+				<Label text="ButtonEffect" position="static" class="item"></Label>
+				<Label text="NavigationController" position="static" class="item"></Label>
+				<Label text="ImageAsset" position="static" class="item"></Label>
+				<Label text="BasicComponent" position="static" class="item"></Label>
+				<Label text="ECharts" position="static" class="item"></Label>
+			</BasicCanvas>
+		</BasicCanvas>
+		<BasicCanvas class="rightBox" position="relative">
+			<NavigationController id="mainNav" width="100%" height="100%" manager="BasicNavigationManager">
+				<BasicComponent width="100%" height="100%" url="tests/BasicCanvas.xml" />
+				<BasicComponent width="100%" height="100%" url="tests/ImageCanvas.xml" />
+				<BasicComponent width="100%" height="100%" url="tests/ImageButton.xml" />
+				<BasicComponent width="100%" height="100%" url="tests/Label.xml" />
+				<BasicComponent width="100%" height="100%" url="tests/Button.xml" />
+				<BasicComponent width="100%" height="100%" url="tests/BasicMovieClip.xml" />
+				<BasicComponent width="100%" height="100%" url="tests/VideoCanvas.xml" />
+				<BasicComponent width="100%" height="100%" url="tests/HtmlCanvas.xml" />
+				<BasicComponent width="100%" height="100%" url="tests/Tween.xml" />
+				<BasicComponent width="100%" height="100%" url="tests/Eval.xml" />
+				<BasicComponent width="100%" height="100%" url="tests/Transitions.xml" />
+				<BasicComponent width="100%" height="100%" url="tests/ButtonEffect.xml" />
+				<BasicComponent width="100%" height="100%" url="tests/NavigationController.xml" />
+				<BasicComponent width="100%" height="100%" url="tests/ImageAsset.xml" />
+				<BasicComponent width="100%" height="100%" url="tests/BasicComponent.xml" />
+				<BasicComponent width="100%" height="100%" url="tests/ECharts.xml" />
+			</NavigationController>
+		</BasicCanvas>
 	</BasicCanvas>
+	<Add>
+		<eval>
+			var bts = $(".mainLayout .leftBox .content .item");
+			bts.click(function(e){
+				var idx = bts.index(this);
+				var mainNav = ZML.find("#mainNav");
+				mainNav.managerInstance.showIdx(idx);
+			});
+		</eval>
+	</Add>
 </Application>
