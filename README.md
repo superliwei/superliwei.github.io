@@ -4,7 +4,7 @@
 
 * BigScreenStudio Pro
 
-    http://amazinghammer.lofter.com/post/1ec4f267_ec70f8f
+    http://www.jianshu.com/p/f86433c9570c
 
 ### 2016
 
