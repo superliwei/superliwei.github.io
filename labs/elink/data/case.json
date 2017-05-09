@@ -1,0 +1,92 @@
+[
+  {
+    "component": "GridDisplay",
+    "data":{
+      "title": "成功案例",
+      "more": false,
+      "fit": true,
+      "items": [
+        {
+          "img": "/images/img.png",
+          "title": "百分点展厅",
+          "content": "/data/md/test.md"
+        },
+        {
+          "img": "/images/img.png",
+          "title": "百分点展厅",
+          "content": "/data/md/test.md"
+        },
+        {
+          "img": "/images/img.png",
+          "title": "百分点展厅",
+          "content": "/data/md/test.md"
+        },
+        {
+          "img": "/images/img.png",
+          "title": "百分点展厅",
+          "content": "/data/md/test.md"
+        },
+        {
+          "img": "/images/img.png",
+          "title": "百分点展厅",
+          "content": "/data/md/test.md"
+        },
+        {
+          "img": "/images/img.png",
+          "title": "百分点展厅",
+          "content": "/data/md/test.md"
+        },
+        {
+          "img": "/images/img.png",
+          "title": "百分点展厅",
+          "content": "/data/md/test.md"
+        },
+        {
+          "img": "/images/img.png",
+          "title": "百分点展厅",
+          "content": "/data/md/test.md"
+        },
+        {
+          "img": "/images/img.png",
+          "title": "百分点展厅",
+          "content": "/data/md/test.md"
+        },
+        {
+          "img": "/images/img.png",
+          "title": "百分点展厅",
+          "content": "/data/md/test.md"
+        },
+        {
+          "img": "/images/img.png",
+          "title": "百分点展厅",
+          "content": "/data/md/test.md"
+        },
+        {
+          "img": "/images/img.png",
+          "title": "百分点展厅",
+          "content": "/data/md/test.md"
+        },
+        {
+          "img": "/images/img.png",
+          "title": "百分点展厅",
+          "content": "/data/md/test.md"
+        },
+        {
+          "img": "/images/img.png",
+          "title": "百分点展厅",
+          "content": "/data/md/test.md"
+        },
+        {
+          "img": "/images/img.png",
+          "title": "百分点展厅",
+          "content": "/data/md/test.md"
+        },
+        {
+          "img": "/images/img.png",
+          "title": "百分点展厅",
+          "content": "/data/md/test.md"
+        }
+      ]
+    }
+  }
+]

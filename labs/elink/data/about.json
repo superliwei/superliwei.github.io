@@ -1,0 +1,67 @@
+[
+	{
+		"component": "ContentDisplay",
+		"data": {
+			"title": "公司概况",
+			"content": "/data/md/about.md"
+		}
+	},
+	{
+		"component": "GridDisplay",
+		"data":{
+			"title": "团队介绍",
+			"more": false,
+			"items": [
+				{
+					"img": "/images/img.png",
+					"title": "黎伟",
+					"content": "/data/md/test.md"
+				},
+				{
+					"img": "/images/img.png",
+					"title": "谢明德",
+					"content": "/data/md/test.md"
+				},
+				{
+					"img": "/images/img.png",
+					"title": "马树静",
+					"content": "/data/md/test.md"
+				},
+				{
+					"img": "/images/img.png",
+					"title": "董让",
+					"content": "/data/md/test.md"
+				},
+				{
+					"img": "/images/img.png",
+					"title": "卢方敏",
+					"content": "/data/md/test.md"
+				},
+				{
+					"img": "/images/img.png",
+					"title": "李设计",
+					"content": "/data/md/test.md"
+				},
+				{
+					"img": "/images/img.png",
+					"title": "张工程",
+					"content": "/data/md/test.md"
+				}
+			]
+		}
+	},
+	{
+		"component": "ContentDisplay",
+		"data": {
+			"title": "加入我们",
+			"content": "/data/md/join.md"
+		}
+	},
+	{
+		"component": "ContentDisplay",
+		"data": {
+			"title": "联系我们",
+			"content": "/data/md/contact.md"
+		}
+	}
+]

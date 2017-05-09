@@ -1,0 +1,203 @@
+[
+	{
+		"component": "NewsDisplay",
+		"data":{
+			"title": "易连动态",
+			"more": "/news",
+			"items": [
+				{
+					"time": "2017-05-14",
+					"title": "易连科技正式上线",
+					"content": "/data/md/test.md"
+				},
+				{
+					"time": "2017-05-15",
+					"title": "易连科技正式上线",
+					"content": "/data/md/test.md"
+				},
+				{
+					"time": "2017-05-16",
+					"title": "易连科技正式上线",
+					"content": "/data/md/test.md"
+				},
+				{
+					"time": "2017-05-17",
+					"title": "易连科技正式上线",
+					"content": "/data/md/test.md"
+				},
+				{
+					"time": "2017-05-18",
+					"title": "易连科技正式上线",
+					"content": "/data/md/test.md"
+				},
+				{
+					"time": "2017-05-19",
+					"title": "易连科技正式上线",
+					"content": "/data/md/test.md"
+				}
+			]
+		}
+	},
+	{
+		"component": "GridDisplay",
+		"data":{
+			"title": "产品与服务",
+			"more": "/service",
+			"items": [
+				{
+					"img": "/images/img.png",
+					"title": "百分点展厅",
+					"content": "/data/md/test.md"
+				},
+				{
+					"img": "/images/img.png",
+					"title": "百分点展厅",
+					"content": "/data/md/test.md"
+				},
+				{
+					"img": "/images/img.png",
+					"title": "百分点展厅",
+					"content": "/data/md/test.md"
+				},
+				{
+					"img": "/images/img.png",
+					"title": "百分点展厅",
+					"content": "/data/md/test.md"
+				},
+				{
+					"img": "/images/img.png",
+					"title": "百分点展厅",
+					"content": "/data/md/test.md"
+				},
+				{
+					"img": "/images/img.png",
+					"title": "百分点展厅",
+					"content": "/data/md/test.md"
+				},
+				{
+					"img": "/images/img.png",
+					"title": "百分点展厅",
+					"content": "/data/md/test.md"
+				},
+				{
+					"img": "/images/img.png",
+					"title": "百分点展厅",
+					"content": "/data/md/test.md"
+				},
+				{
+					"img": "/images/img.png",
+					"title": "百分点展厅",
+					"content": "/data/md/test.md"
+				}
+			]
+		}
+	},
+	{
+		"component": "GridDisplay",
+		"data":{
+			"title": "经典案例",
+			"more": "/case",
+			"items": [
+				{
+					"img": "/images/img.png",
+					"title": "百分点展厅",
+					"content": "/data/md/test.md"
+				},
+				{
+					"img": "/images/img.png",
+					"title": "百分点展厅",
+					"content": "/data/md/test.md"
+				},
+				{
+					"img": "/images/img.png",
+					"title": "百分点展厅",
+					"content": "/data/md/test.md"
+				},
+				{
+					"img": "/images/img.png",
+					"title": "百分点展厅",
+					"content": "/data/md/test.md"
+				},
+				{
+					"img": "/images/img.png",
+					"title": "百分点展厅",
+					"content": "/data/md/test.md"
+				},
+				{
+					"img": "/images/img.png",
+					"title": "百分点展厅",
+					"content": "/data/md/test.md"
+				},
+				{
+					"img": "/images/img.png",
+					"title": "百分点展厅",
+					"content": "/data/md/test.md"
+				},
+				{
+					"img": "/images/img.png",
+					"title": "百分点展厅",
+					"content": "/data/md/test.md"
+				},
+				{
+					"img": "/images/img.png",
+					"title": "百分点展厅",
+					"content": "/data/md/test.md"
+				}
+			]
+		}
+	},
+	{
+		"component": "GridDisplay",
+		"data":{
+			"title": "我们的客户",
+			"more": "/client",
+			"items": [
+				{
+					"img": "/images/img.png",
+					"title": "百分点展厅",
+					"content": "/data/md/test.md"
+				},
+				{
+					"img": "/images/img.png",
+					"title": "百分点展厅",
+					"content": "/data/md/test.md"
+				},
+				{
+					"img": "/images/img.png",
+					"title": "百分点展厅",
+					"content": "/data/md/test.md"
+				},
+				{
+					"img": "/images/img.png",
+					"title": "百分点展厅",
+					"content": "/data/md/test.md"
+				},
+				{
+					"img": "/images/img.png",
+					"title": "百分点展厅",
+					"content": "/data/md/test.md"
+				},
+				{
+					"img": "/images/img.png",
+					"title": "百分点展厅",
+					"content": "/data/md/test.md"
+				},
+				{
+					"img": "/images/img.png",
+					"title": "百分点展厅",
+					"content": "/data/md/test.md"
+				},
+				{
+					"img": "/images/img.png",
+					"title": "百分点展厅",
+					"content": "/data/md/test.md"
+				},
+				{
+					"img": "/images/img.png",
+					"title": "百分点展厅",
+					"content": "/data/md/test.md"
+				}
+			]
+		}
+	}
+]
